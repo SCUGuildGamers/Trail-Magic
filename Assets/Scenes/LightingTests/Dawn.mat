@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Morning
+  m_Name: Dawn
   m_Shader: {fileID: 4800000, guid: eb3c6fb598ded4c71b8968e1c40a3b4d, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -98,23 +98,23 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _HorizonLineContribution: 0.25
+    - _HorizonLineContribution: 0.215
     - _HorizonLineExponent: 4
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _SkyGradientExponent: 2.5
+    - _SkyGradientExponent: 2.26
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
-    - _SunDiscExponent: 130060
-    - _SunDiscMultiplier: 75
-    - _SunHaloContribution: 0.75
-    - _SunHaloExponent: 1997
+    - _SunDiscExponent: 130147
+    - _SunDiscMultiplier: 1201.62
+    - _SunHaloContribution: 0.356
+    - _SunHaloExponent: 134
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
@@ -123,11 +123,11 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HorizonLineColor: {r: 0.9044118, g: 0.8872592, b: 0.7913603, a: 1}
-    - _SkyGradientBottom: {r: 0.5801887, g: 0.71468383, b: 1, a: 1}
-    - _SkyGradientTop: {r: 0.172549, g: 0.5686274, b: 0.6941177, a: 1}
+    - _SkyGradientBottom: {r: 0.3576006, g: 0.5706656, b: 0.9245283, a: 1}
+    - _SkyGradientTop: {r: 1, g: 0.8160377, b: 0.95838946, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _SunDiscColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SunHaloColor: {r: 0.8349056, g: 0.64453536, b: 0.4725881, a: 1}
+    - _SunDiscColor: {r: 0.9339623, g: 0.92572594, b: 0.7445265, a: 1}
+    - _SunHaloColor: {r: 0.9669811, g: 0.95079124, b: 0.8255829, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &153596866764138263
 MonoBehaviour:
