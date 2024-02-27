@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z; // gets the direction the player is moving
 
-        characterController.Move(move * speed * Time.deltaTime); // Moves the player in the direction they are facing
+        characterController.Move(speed * Time.deltaTime * move); // Moves the player in the direction they are facing
 
         velocity.y += gravity * Time.deltaTime; // Applies gravity to the player
 
