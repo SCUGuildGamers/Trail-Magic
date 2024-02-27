@@ -11,19 +11,22 @@ public class HoverObject : MonoBehaviour
         foreach (GameObject interactable in interactables)
         {
             if (interactable.GetComponent<Outline>() == null) 
-            {
+            { // If the object does not have an outline, add one
                 interactable.AddComponent<Outline>();
                 interactable.GetComponent<Outline>().enabled = false;
                 interactable.GetComponent<Outline>().OutlineColor = outlineColor;
                 interactable.GetComponent<Outline>().OutlineWidth = 5f;
             }
-            else{
+            else
+            { // If the object already has an outline, enable it
                 interactable.GetComponent<Outline>().enabled = true;
             }
+
             if (interactable.GetComponent<OutlineSelect>() == null) 
             {
                 interactable.GetComponent<OutlineSelect>();
             }
+
             if (interactable.GetComponent<BoxCollider>() == null)
             {
                 interactable.GetComponent<BoxCollider>();

@@ -13,11 +13,11 @@ public class OutlineSelect : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        outlineComp.enabled = true;
+        outlineComp.enabled = true; // Enables the outline when the mouse is over the object
     }
 
     private void OnMouseExit()
     {
-        outlineComp.enabled = false;
+        outlineComp.enabled = false; // Disables the outline when the mouse is not over the object
     }
 }
