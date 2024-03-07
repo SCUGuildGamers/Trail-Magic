@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.8253272, g: 0.85077494, b: 0.790754, a: 1}
+  m_IndirectSpecularColor: {r: 0.82532716, g: 0.850775, b: 0.790754, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4994,6 +4994,7 @@ GameObject:
   m_Component:
   - component: {fileID: 211681791}
   - component: {fileID: 211681790}
+  - component: {fileID: 211681792}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -5078,6 +5079,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &211681792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211681789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &218927198
 GameObject:
   m_ObjectHideFlags: 0
@@ -5237,6 +5261,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cabin
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f1ecdb102ad629b43941147ff5333cbc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -5312,7 +5340,7 @@ Terrain:
   m_StaticShadowCaster: 0
   m_IgnoreQualitySettings: 0
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
+  m_MaterialTemplate: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
@@ -5519,8 +5547,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533927139}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7176403, z: 0, w: 0.696414}
-  m_LocalPosition: {x: 478.37, y: 54.1, z: 520.98}
+  m_LocalRotation: {x: -0, y: -0.6589265, z: -0, w: 0.7522074}
+  m_LocalPosition: {x: 477.8, y: 129.6, z: 533.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5528,7 +5556,7 @@ Transform:
   - {fileID: 1273296416}
   - {fileID: 177959035}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -91.72, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -82.436, z: 0}
 --- !u!1 &1851471383 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f1ecdb102ad629b43941147ff5333cbc, type: 3}
@@ -5560,6 +5588,71 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 15.188736, y: 6.9462643, z: 12.151089}
   m_Center: {x: 0.23693873, y: 2.9731302, z: -0.074938774}
+--- !u!1001 &2858544650296891391
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6006848691343832469, guid: eb3d9779d8f1e904eb982bd7b9979068, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100749.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006848691343832469, guid: eb3d9779d8f1e904eb982bd7b9979068, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 498
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006848691343832469, guid: eb3d9779d8f1e904eb982bd7b9979068, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -73
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006848691343832469, guid: eb3d9779d8f1e904eb982bd7b9979068, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 517
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006848691343832469, guid: eb3d9779d8f1e904eb982bd7b9979068, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006848691343832469, guid: eb3d9779d8f1e904eb982bd7b9979068, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006848691343832469, guid: eb3d9779d8f1e904eb982bd7b9979068, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006848691343832469, guid: eb3d9779d8f1e904eb982bd7b9979068, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006848691343832469, guid: eb3d9779d8f1e904eb982bd7b9979068, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006848691343832469, guid: eb3d9779d8f1e904eb982bd7b9979068, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006848691343832469, guid: eb3d9779d8f1e904eb982bd7b9979068, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347627565391408943, guid: eb3d9779d8f1e904eb982bd7b9979068, type: 3}
+      propertyPath: m_Name
+      value: Clouds
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347627565391408943, guid: eb3d9779d8f1e904eb982bd7b9979068, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eb3d9779d8f1e904eb982bd7b9979068, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -5568,3 +5661,4 @@ SceneRoots:
   - {fileID: 1271690930}
   - {fileID: 1533927142}
   - {fileID: 952421158}
+  - {fileID: 2858544650296891391}
