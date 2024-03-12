@@ -38,10 +38,10 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _CloudScale: 50
-    - _CloudsAlpha: 0.98
-    - _CloudsPower: 0.36
-    - _DistortScale: 51
+    - _CloudScale: 128.27
+    - _CloudsAlpha: 1.65
+    - _CloudsPower: 0.6
+    - _DistortScale: 49.51
     - _QueueControl: 0
     m_Colors:
     - _CloudSpeed: {r: 0.005, g: 0.005, b: 0, a: 0}
