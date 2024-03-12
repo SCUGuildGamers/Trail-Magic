@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class HoverObject : MonoBehaviour
 {
-    private GameObject currentHoverObject;
+    void Start(){
+        Unhover();
+    }
     public void Hover() {
-        currentHoverObject.GetComponent<Outline>().enabled = true;
+        Debug.Log("Hovering!");
+        if(GetComponent<Outline>() != null){
+            GetComponent<Outline>().enabled = true;
+        }
     }
 
     public void Unhover()
     {
-        currentHoverObject.GetComponent<Outline>().enabled = false;
+        Debug.Log("Not hovering!");
+        if(GetComponent<Outline>() != null)
+            GetComponent<Outline>().enabled = false;
     }
 }

@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LookAtMouse : MonoBehaviour
+public class OutlineLook : MonoBehaviour
 {
-    private GameObject hitObject;
-    private HoverObject currentHoverObject;
+    [SerializeField] private GameObject hitObject;
+    [SerializeField] private HoverObject currentHoverObject;
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -13,12 +13,15 @@ public class LookAtMouse : MonoBehaviour
         RaycastHit hitInfo;
 
         if (Physics.Raycast(rayOrigin, out hitInfo)) {
+            Debug.Log(rayOrigin);
             if (hitInfo.collider != null) {
                 hitObject = hitInfo.collider.gameObject;
                 if (hitObject.GetComponent<HoverObject>() != null)
                 {
                     if (hitObject.GetComponent<HoverObject>() != currentHoverObject){
-                        currentHoverObject.Unhover();
+                        if(currentHoverObject!=null){
+                            currentHoverObject.Unhover();
+                        }
                         currentHoverObject = hitObject.GetComponent<HoverObject>();
                         currentHoverObject.Hover();
                     }
@@ -38,6 +41,12 @@ public class LookAtMouse : MonoBehaviour
                     currentHoverObject = null;
                 }
             }
+        }
+        else{
+                if(currentHoverObject != null) {
+                    currentHoverObject.Unhover();
+                    currentHoverObject = null;
+                }
         }
     }
 }
