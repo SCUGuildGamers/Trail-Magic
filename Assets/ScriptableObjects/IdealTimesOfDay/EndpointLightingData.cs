@@ -14,9 +14,15 @@ public class EndpointLightingData : ScriptableObject
     public Color sunColor;
 
     //fog settings
+    public Color fogColor;
+    public float fogDensity;
+    public float envLightingIntensityMult;
 
 
     //directional light data
+    public Color emissionColor;
+    public float emissionIntensity;
+
 
     //other light data? (maybe lights in the cabin)
 
@@ -26,9 +32,36 @@ public class EndpointLightingData : ScriptableObject
 
     //post-processing data
     //bloom
+    public float bloomThreshhold;
+    public float bloomIntensity;
+    public float bloomScatter;
+    public Color bloomTint;
+
     //vignette
-    //shadows midtones highlights
+    public Color vignetteColor;
+    public float vignetteIntensity;
+    public float vignetteSmoothness;
+
     //color adjustments
+    public float adjustPostExposure;
+    public float adjustContrast;
+    public Color adjustColorFilter;
+    public float adjustHueShift;
+    public float adjustSaturation;
+
+    //shadows midtones highlights
+    public Color smhShadows;
+    public Color smhMidtones;
+    public Color smhHighlights;
+
+    public float smhShadowStart;
+    public float smhShadowEnd;
+
+    public float smhHighlightStart;
+    public float smhHighlightEnd;
+
+
     //tonemapping
+    //(always neutral)
 
 }
