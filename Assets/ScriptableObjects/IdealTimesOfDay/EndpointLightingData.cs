@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName = "Data", menuName ="ScriptableObjects/LightingData", order = 1)]
-public class LightingData : ScriptableObject
+[CreateAssetMenu(fileName = "Data", menuName ="ScriptableObjects/EndpointLightingData", order = 1)]
+public class EndpointLightingData : ScriptableObject
 {
     //skybox data
     public float skyBoxIntensity;
     public Color skyTopColor;
     public Color skyBottomColor;
     public float skyGradExponent;
+    public Color sunColor;
 
     //fog settings
+
 
     //directional light data
 

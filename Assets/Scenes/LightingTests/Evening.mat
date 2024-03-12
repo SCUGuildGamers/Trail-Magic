@@ -98,14 +98,14 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _HorizonLineContribution: 0.412
+    - _HorizonLineContribution: 0
     - _HorizonLineExponent: 15.72
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _SkyGradientExponent: 5.29
+    - _SkyGradientExponent: 2.01
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

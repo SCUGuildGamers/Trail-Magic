@@ -10,7 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b541119bbbc030f4481f083effb5dd74, type: 3}
-  m_Name: Evening
+  m_Name: Night
   m_EditorClassIdentifier: 
-  skyTopColor: {r: 0.514151, g: 0.063056245, b: 0.063056245, a: 0}
-  skyBottomColor: {r: 0.24011324, g: 0.08245819, b: 0.514151, a: 0}
+  skyBoxIntensity: 0
+  skyTopColor: {r: 0.3421531, g: 0.10742258, b: 0.6698113, a: 0}
+  skyBottomColor: {r: 0.057760775, g: 0.13947217, b: 0.2783019, a: 0}
+  skyGradExponent: 0
+  sunColor: {r: 0.41260237, g: 0.42776316, b: 0.7169812, a: 0}
