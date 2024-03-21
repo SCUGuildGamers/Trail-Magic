@@ -18,17 +18,9 @@ public class EndpointLightingData : ScriptableObject
     public float fogDensity;
     public float envLightingIntensityMult;
 
-
     //directional light data
     public Color emissionColor;
     public float emissionIntensity;
-
-
-    //other light data? (maybe lights in the cabin)
-
-    //weather (clouds, stars, etc.)
-
-    //terrain data
 
     //post-processing data
     //bloom
@@ -63,5 +55,9 @@ public class EndpointLightingData : ScriptableObject
 
     //tonemapping
     //(always neutral)
+
+    //other light data? (maybe lights in the cabin)
+    //weather (clouds, stars, etc.)
+    //terrain data
 
 }
