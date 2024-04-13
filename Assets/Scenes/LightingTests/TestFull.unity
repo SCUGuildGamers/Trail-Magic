@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 420224735}
-  m_IndirectSpecularColor: {r: 0.5602774, g: 0.85322917, b: 0.9691022, a: 1}
+  m_IndirectSpecularColor: {r: 0.56765985, g: 0.81061786, b: 0.8738198, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5351,10 +5351,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeData: {fileID: 11400000, guid: bf2bf6fec75f66b4eb541eae5efacace, type: 2}
-  transition: {fileID: 11400000, guid: bf7a9735a48a3c34c87fdc418ece05b6, type: 2}
+  transitions:
+  - {fileID: 11400000, guid: bf7a9735a48a3c34c87fdc418ece05b6, type: 2}
+  - {fileID: 11400000, guid: 598ec41f2cff79f40a499af5d58b6e13, type: 2}
   sun: {fileID: 420224735}
   lerpValue: 0
   usingGrad: 1
+  transitionDuration: 300
 --- !u!4 &969155059
 Transform:
   m_ObjectHideFlags: 0

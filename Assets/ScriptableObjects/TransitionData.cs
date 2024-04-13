@@ -54,7 +54,4 @@ public class TransitionData : ScriptableObject
 
     public Gradient smhHighlightStart;
     public Gradient smhHighlightEnd;
-
-
-
 }
