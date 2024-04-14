@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 0.76
+  m_AmbientIntensity: 2.07
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.3224012, g: 0.53914934, b: 0.5943396, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 2c4e24bb6fc1df1468d581aa795ea4fe, type: 2}
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1884037031}
-  m_IndirectSpecularColor: {r: 0.28469318, g: 0.8904067, b: 0.98208934, a: 1}
+  m_IndirectSpecularColor: {r: 0.5675371, g: 0.8105419, b: 0.87381786, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -648,7 +648,7 @@ Transform:
   m_GameObject: {fileID: 794315047}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0038395417, y: 0.4937946, z: -0.0067612077, w: -0.86954385}
-  m_LocalPosition: {x: 1343, y: 323, z: -587}
+  m_LocalPosition: {x: 898.16, y: 217.77, z: 829.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -742,7 +742,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!154 &972633523
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -811,7 +811,7 @@ Transform:
   m_GameObject: {fileID: 972633522}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -155, y: -20, z: 19.5}
+  m_LocalPosition: {x: -155, y: -118, z: 19.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
