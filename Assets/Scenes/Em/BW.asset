@@ -220,10 +220,10 @@ MonoBehaviour:
     m_Value: 9
   intensity:
     m_OverrideState: 1
-    m_Value: 0.916
+    m_Value: 0.895
   response:
     m_OverrideState: 1
-    m_Value: 0.013
+    m_Value: 0.237
   texture:
     m_OverrideState: 0
     m_Value: {fileID: 0}
@@ -520,7 +520,7 @@ MonoBehaviour:
     m_Value: 1.44
   scatter:
     m_OverrideState: 1
-    m_Value: 0.432
+    m_Value: 0.774
   clamp:
     m_OverrideState: 1
     m_Value: 65472

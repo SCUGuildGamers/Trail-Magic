@@ -55,13 +55,13 @@ MonoBehaviour:
   active: 1
   shadows:
     m_OverrideState: 1
-    m_Value: {r: 0.21929511, g: 0.5283019, b: 0.4642395, a: 1}
+    m_Value: {r: 0.25490198, g: 0.5764706, b: 0.5084787, a: 1}
   highlights:
     m_OverrideState: 1
     m_Value: {r: 0.7921569, g: 0.53333336, b: 0.6457925, a: 1}
   balance:
     m_OverrideState: 1
-    m_Value: -10
+    m_Value: -7
 --- !u!114 &-7459473755710470455
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -77,22 +77,22 @@ MonoBehaviour:
   active: 1
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 0.3173781, y: 1, z: 0.9246267, w: 0.052956752}
+    m_Value: {x: 0.3173781, y: 1, z: 0.9246267, w: 0.2736099}
   midtones:
     m_OverrideState: 1
     m_Value: {x: 1, y: 0.9013732, z: 0.85846704, w: 0.34421894}
   highlights:
-    m_OverrideState: 0
-    m_Value: {x: 0.91561264, y: 0.9315183, z: 1, w: -0.2647838}
+    m_OverrideState: 1
+    m_Value: {x: 0.91561264, y: 0.9315183, z: 1, w: 0.31774056}
   shadowsStart:
     m_OverrideState: 0
     m_Value: 0
   shadowsEnd:
     m_OverrideState: 1
-    m_Value: 0.36
+    m_Value: 0.3
   highlightsStart:
     m_OverrideState: 1
-    m_Value: 0.2
+    m_Value: 0.33
   highlightsEnd:
     m_OverrideState: 0
     m_Value: 1
@@ -114,13 +114,13 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.79
   intensity:
     m_OverrideState: 1
-    m_Value: 1.14
+    m_Value: 0.52
   scatter:
     m_OverrideState: 1
-    m_Value: 0.537
+    m_Value: 0.455
   clamp:
     m_OverrideState: 0
     m_Value: 65472
@@ -173,10 +173,10 @@ MonoBehaviour:
     m_Value: 0
   focusDistance:
     m_OverrideState: 1
-    m_Value: 2.1
+    m_Value: 2.09
   aperture:
     m_OverrideState: 1
-    m_Value: 6.3
+    m_Value: 6.6
   focalLength:
     m_OverrideState: 1
     m_Value: 51
@@ -369,17 +369,17 @@ MonoBehaviour:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0.04534005
-          value: 0.8484043
-          inSlope: -0.4033589
-          outSlope: -0.4033589
+          time: 0.09823678
+          value: 0.64893615
+          inSlope: 0.070390455
+          outSlope: 0.070390455
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.40176323
-          value: 0.4680851
+          time: 0.3979849
+          value: 0.44148934
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -387,17 +387,17 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.59193957
-          value: 0.62765956
-          inSlope: -1.4759209
-          outSlope: -1.4759209
+          time: 0.5957179
+          value: 0.5904255
+          inSlope: -0.44929838
+          outSlope: -0.44929838
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.7858942
-          value: 0.25797874
+          time: 0.77833754
+          value: 0.42287236
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -448,7 +448,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.181
+    m_Value: 0.213
 --- !u!114 &-763606294809551069
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -547,19 +547,19 @@ MonoBehaviour:
   active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: 0.52
+    m_Value: -0.12
   contrast:
     m_OverrideState: 1
-    m_Value: -23
+    m_Value: -17
   colorFilter:
     m_OverrideState: 1
     m_Value: {r: 1, g: 0.8652974, b: 0.7783019, a: 1}
   hueShift:
     m_OverrideState: 1
-    m_Value: -10
+    m_Value: -0
   saturation:
     m_OverrideState: 1
-    m_Value: -16
+    m_Value: -2
 --- !u!114 &5144529655550126536
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -575,13 +575,13 @@ MonoBehaviour:
   active: 1
   lift:
     m_OverrideState: 1
-    m_Value: {x: 0.87704974, y: 0.9981655, z: 1, w: -0.026478307}
+    m_Value: {x: 1, y: 1, z: 1, w: 0.01765232}
   gamma:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.8512852, z: 0.9862745, w: -0.21182704}
+    m_Value: {x: 1, y: 1, z: 1, w: -0.079435125}
   gain:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.9664538, z: 0.9738565, w: 0.15887026}
+    m_Value: {x: 1, y: 1, z: 1, w: -0.07943514}
 --- !u!114 &5524875508100235876
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -603,7 +603,7 @@ MonoBehaviour:
     m_Value: 0.818
   response:
     m_OverrideState: 1
-    m_Value: 0.747
+    m_Value: 0.571
   texture:
     m_OverrideState: 0
     m_Value: {fileID: 0}
@@ -622,28 +622,28 @@ MonoBehaviour:
   active: 1
   redOutRedIn:
     m_OverrideState: 1
-    m_Value: 137
+    m_Value: 136
   redOutGreenIn:
     m_OverrideState: 1
-    m_Value: -29
+    m_Value: -7
   redOutBlueIn:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: -61
   greenOutRedIn:
     m_OverrideState: 1
-    m_Value: 21
+    m_Value: 26
   greenOutGreenIn:
     m_OverrideState: 1
-    m_Value: 109
+    m_Value: 72
   greenOutBlueIn:
     m_OverrideState: 1
-    m_Value: -6
+    m_Value: 16
   blueOutRedIn:
     m_OverrideState: 1
-    m_Value: -9
+    m_Value: 19
   blueOutGreenIn:
     m_OverrideState: 1
-    m_Value: 32
+    m_Value: 4
   blueOutBlueIn:
     m_OverrideState: 1
     m_Value: 85
