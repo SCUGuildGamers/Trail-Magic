@@ -34,9 +34,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - 90
+  - 80
+  - bw
   m_SortingLayers:
   - name: Default
     uniqueID: 0
