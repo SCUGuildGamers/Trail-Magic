@@ -30,5 +30,11 @@ public class MidtonesExperiment : MonoBehaviour
             smh.midtones.value = midtone;
             smh.highlights.value = highlight;
         }*/
+        if (volume.profile.TryGet(out ShadowsMidtonesHighlights smh))
+        {
+            shadow = smh.shadows.value;
+            midtone = smh.midtones.value;
+            highlight = smh.highlights.value;
+        }
     }
 }
