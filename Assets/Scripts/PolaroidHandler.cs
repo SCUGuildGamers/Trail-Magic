@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class PolaroidHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+    polaroidCam = GameObject.FindGameObjectWithTag("PolaroidCamera");
+    
+    private void Update() {
         
-    }
+        if(/*Player is in specific Collider*/){
+            //Display UI element that tells the player to press E
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            if (Input.GetKeyDown(KeyCode.E)) {
+                polaroidCam.SetActive(true);
+            }
+        }
+        else {
+            polaroidCam.SetActive(false);
+        }
     }
 }
