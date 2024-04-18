@@ -34,9 +34,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - 90s
+  - 80s
+  - bw
   m_SortingLayers:
   - name: Default
     uniqueID: 0
