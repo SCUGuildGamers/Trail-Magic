@@ -259,6 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7851300217407812886}
   - component: {fileID: 2925822439440838013}
+  - component: {fileID: 6084329800846396911}
   m_Layer: 0
   m_Name: tallTreeCTD
   m_TagString: Untagged
@@ -314,3 +315,24 @@ LODGroup:
     - renderer: {fileID: 5371262484810356248}
     - renderer: {fileID: 143720633527033233}
   m_Enabled: 1
+--- !u!65 &6084329800846396911
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7110399657704048863}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.95, y: 35.330093, z: 2.21}
+  m_Center: {x: 0, y: 17.165047, z: 0}
