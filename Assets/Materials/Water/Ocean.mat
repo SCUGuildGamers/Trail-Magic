@@ -50,16 +50,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Density: 455.03
+    - _Density: 5
     - _GradientStrength: 7
     - _Power: 10
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Speed: 0.1
+    - _Speed: 2.14
     - _VoronoiPower: 3
     - _VoronoiStep: 0.42
     - _WaveHeight: 0.0005
-    - _WaveScale: 231.3
+    - _WaveScale: 30.4
     - _WaveSpeed: 0.006
     m_Colors:
     - _BaseColor: {r: 0.16487184, g: 0.42117643, b: 0.6132076, a: 0}
