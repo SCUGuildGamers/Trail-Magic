@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class PolaroidHandler : MonoBehaviour
 {
-    polaroidCam = GameObject.FindGameObjectWithTag("PolaroidCamera");
+    GameObject polaroidCam = GameObject.FindGameObjectWithTag("PolaroidCamera");
     
-    private void Update() {
-        
-        if(/*Player is in specific Collider*/){
+    private void Update() 
+    {
+        /*
+        if () //if Player is in specific Collider
+        {
             //Display UI element that tells the player to press E
 
             if (Input.GetKeyDown(KeyCode.E)) {
@@ -18,5 +20,6 @@ public class PolaroidHandler : MonoBehaviour
         else {
             polaroidCam.SetActive(false);
         }
+        */
     }
 }
