@@ -37,9 +37,19 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Alpha: 1.28
+    - _FlowSpeed: 1
+    - _FoamDensity: 2.27
+    - _FoamPower: 4.8
+    - _NormalStrength: 0.16
     - _QueueControl: 0
     - _QueueOffset: 0
-    m_Colors: []
+    - _RippleBase: 0
+    - _RippleScale: 2.7
+    - _RippleSpeed: 29.2
+    m_Colors:
+    - _RiverColor: {r: 0.34718758, g: 0.7226999, b: 0.8867924, a: 0}
+    - _RiverFlow: {r: -0.7, g: -3, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &7332144767858006438
 MonoBehaviour:
