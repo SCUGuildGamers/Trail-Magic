@@ -88,8 +88,8 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HorizonLineColor: {r: 0.30588233, g: 0.96862745, b: 0.9583086, a: 1}
-    - _SkyGradientBottom: {r: 0.9052721, g: 0.49114743, b: 0.5504968, a: 1}
-    - _SkyGradientTop: {r: 0.8392157, g: 0.7294118, b: 0.6784314, a: 1}
+    - _SkyGradientBottom: {r: 0.19093272, g: 0.3281386, b: 0.65192986, a: 1}
+    - _SkyGradientTop: {r: 0.5268752, g: 0.4008612, b: 0.5532491, a: 1}
     - _SunDiscColor: {r: 1, g: 0.9956156, b: 0.9056604, a: 1}
     - _SunHaloColor: {r: 0.8980392, g: 0.8762909, b: 0.6666667, a: 1}
   m_BuildTextureStacks: []

@@ -61,6 +61,6 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _BranchTint: {r: 0.5424528, g: 0.28453186, b: 0.25587398, a: 0}
-    - _LeavesTint: {r: 0.19384123, g: 0.6226415, b: 0.25347573, a: 0}
+    - _BranchTint: {r: 0.9528302, g: 0.10842169, b: 0.004494493, a: 0}
+    - _LeavesTint: {r: 0.7830189, g: 0.6832948, b: 0.7576992, a: 0}
   m_BuildTextureStacks: []
