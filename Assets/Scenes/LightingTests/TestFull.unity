@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 420224735}
-  m_IndirectSpecularColor: {r: 0.56765985, g: 0.81061786, b: 0.8738198, a: 1}
+  m_IndirectSpecularColor: {r: 0.9187727, g: 0.70060635, b: 0.7022155, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5332,7 +5332,7 @@ GameObject:
   - component: {fileID: 969155059}
   - component: {fileID: 969155058}
   m_Layer: 0
-  m_Name: LightingManager
+  m_Name: agertingManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5350,14 +5350,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038a93cc2259b484aa767f2f471bc0eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeData: {fileID: 11400000, guid: bf2bf6fec75f66b4eb541eae5efacace, type: 2}
+  timeData: {fileID: 0}
   transitions:
   - {fileID: 11400000, guid: bf7a9735a48a3c34c87fdc418ece05b6, type: 2}
   - {fileID: 11400000, guid: 598ec41f2cff79f40a499af5d58b6e13, type: 2}
+  - {fileID: 11400000, guid: b43c67db9ca4f47ea8d60a99ff133439, type: 2}
+  - {fileID: 11400000, guid: 5c3a20ef9946d4189b40069c9ea4f33d, type: 2}
   sun: {fileID: 420224735}
   lerpValue: 0
   usingGrad: 1
-  transitionDuration: 300
+  transitionDuration: 5
 --- !u!4 &969155059
 Transform:
   m_ObjectHideFlags: 0
@@ -5751,7 +5753,7 @@ Transform:
   m_GameObject: {fileID: 1533927139}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7176403, z: 0, w: 0.696414}
-  m_LocalPosition: {x: 478.37, y: 54.1, z: 520.98}
+  m_LocalPosition: {x: 478.37, y: 226.3, z: 520.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
