@@ -38,9 +38,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _Alpha: 1.28
-    - _FlowSpeed: 1
-    - _FoamDensity: 2.27
-    - _FoamPower: 4.8
+    - _FlowSpeed: 14.9
+    - _FoamDensity: 4.5
+    - _FoamPower: 6.93
     - _NormalStrength: 0.16
     - _QueueControl: 0
     - _QueueOffset: 0
