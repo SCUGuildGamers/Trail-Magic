@@ -549,8 +549,8 @@
     },
     "m_FragmentContext": {
         "m_Position": {
-            "x": 863.0,
-            "y": 410.0
+            "x": 1063.9998779296875,
+            "y": 446.99993896484377
         },
         "m_Blocks": [
             {
@@ -1745,7 +1745,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Alpha",
     "m_StageCapability": 2,
-    "m_Value": 1.0,
+    "m_Value": 0.8500000238418579,
     "m_DefaultValue": 1.0,
     "m_Labels": []
 }

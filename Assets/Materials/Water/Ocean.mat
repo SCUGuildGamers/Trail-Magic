@@ -50,19 +50,19 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Density: 5
+    - _Density: 639.31
     - _GradientStrength: 7
-    - _Power: 10
+    - _Power: 19.24
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Speed: 2.14
     - _VoronoiPower: 3
     - _VoronoiStep: 0.42
-    - _WaveHeight: 0.0005
-    - _WaveScale: 30.4
-    - _WaveSpeed: 0.006
+    - _WaveHeight: 0.0003
+    - _WaveScale: 561.7
+    - _WaveSpeed: 0.0006
     m_Colors:
-    - _BaseColor: {r: 0.16487184, g: 0.42117643, b: 0.6132076, a: 0}
-    - _RippleColor: {r: 0.6775098, g: 0.90896934, b: 0.9575472, a: 0}
+    - _BaseColor: {r: 0.14891866, g: 0.32714078, b: 0.4575472, a: 0}
+    - _RippleColor: {r: 0.13481392, g: 0.20547804, b: 0.2198504, a: 0}
     - _VoronoiColor: {r: 0.4753471, g: 0.68914, b: 0.9245283, a: 0}
   m_BuildTextureStacks: []
