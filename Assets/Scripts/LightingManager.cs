@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+
 
 public class LightingManager : MonoBehaviour
 {
@@ -13,7 +16,14 @@ public class LightingManager : MonoBehaviour
     [SerializeField] float transitionDuration = 300f; // 5 minutes
     int currentTransitionIndex = 0; // Track current transition index
     float transitionStartTime; // Track the start of the current transition
- 
+
+    //for global volume adjustments
+    [SerializeField] VolumeProfile profile;
+    private Bloom bloom;
+    private Vignette vignette;
+    private ColorAdjustments ca;
+    private ShadowsMidtonesHighlights smh;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +40,7 @@ public class LightingManager : MonoBehaviour
 
             SetSkyColors();
             SetDirectionalLight();
+            SetGlobalVolume();
         }
         else
         {
@@ -51,8 +62,10 @@ public class LightingManager : MonoBehaviour
             TransitionData currentTransition = transitions[currentTransitionIndex];
 
             // Apply sky colors from the current transition data
+            //skyboxMat.SetColor("_SkyGradientBottom", currentTransition.skyBoxIntensity.Evaluate(lerpValue));
             skyboxMat.SetColor("_SkyGradientTop", currentTransition.skyTopColor.Evaluate(lerpValue));
             skyboxMat.SetColor("_SkyGradientBottom", currentTransition.skyBottomColor.Evaluate(lerpValue));
+            skyboxMat.SetColor("_SkyGradientExponent", currentTransition.skyGradExponent.Evaluate(lerpValue));
 
             if (lerpValue >= 1.0f)
             {
@@ -67,8 +80,14 @@ public class LightingManager : MonoBehaviour
         if (transitions.Length > 0)
         {
             TransitionData currentTransition = transitions[currentTransitionIndex];
-            sun.color = currentTransition.sunColor.Evaluate(lerpValue);
+            sun.color = currentTransition.emissionColor.Evaluate(lerpValue);
+            sun.intensity = currentTransition.emissionIntensity.Evaluate(lerpValue).r;
         }
+    }
+
+    void setFog()
+    {
+
     }
 
     void SetIdleColors()
@@ -76,5 +95,64 @@ public class LightingManager : MonoBehaviour
         skyboxMat.SetColor("_SkyGradientTop", timeData.skyTopColor);
         skyboxMat.SetColor("_SkyGradientBottom", timeData.skyBottomColor);
         sun.color = timeData.sunColor;
+    }
+
+    void SetGlobalVolume()
+    {
+        if (transitions.Length > 0)
+        {
+            TransitionData currentTransition = transitions[currentTransitionIndex];
+            Color varColor; //temp variable
+
+            //colors are 0-255
+            //our variables go from min-max
+            //translating color to float -> (color.r)/255*[difference between min and max]+min
+
+            //bloom
+            if(profile.TryGet<Bloom>(out bloom))
+            {
+                bloom.threshold.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.bloomThreshhold.Evaluate(lerpValue).r));//needs normalizing
+                bloom.intensity.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.bloomIntensity.Evaluate(lerpValue).r));//needs normalizing
+                bloom.scatter.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.bloomScatter.Evaluate(lerpValue).r));//needs normalizing
+                varColor = currentTransition.bloomTint.Evaluate(lerpValue);
+                bloom.tint.SetValue(new UnityEngine.Rendering.Vector4Parameter(new Vector4(varColor.r, varColor.g, varColor.b, 1)));
+            }
+
+            //vignette
+            if (profile.TryGet<Vignette>(out vignette))
+            {
+                varColor = currentTransition.vignetteColor.Evaluate(lerpValue);
+                vignette.color.SetValue(new UnityEngine.Rendering.Vector4Parameter(new Vector4(varColor.r, varColor.g, varColor.b, 1)));
+                vignette.intensity.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.vignetteIntensity.Evaluate(lerpValue).r));//needs normalizing
+                vignette.smoothness.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.vignetteSmoothness.Evaluate(lerpValue).r));//needs normalizing
+            }
+
+            //color adjustments
+            if (profile.TryGet<ColorAdjustments>(out ca))
+            {
+                ca.postExposure.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.adjustPostExposure.Evaluate(lerpValue).r));//needs normalizing
+                ca.contrast.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.adjustContrast.Evaluate(lerpValue).r));//needs normalizing
+                varColor = currentTransition.adjustColorFilter.Evaluate(lerpValue);
+                ca.colorFilter.SetValue(new UnityEngine.Rendering.Vector4Parameter(new Vector4(varColor.r,varColor.g,varColor.b,1)));
+                ca.hueShift.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.adjustHueShift.Evaluate(lerpValue).r));//needs normalizing
+                ca.saturation.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.adjustSaturation.Evaluate(lerpValue).r));//needs normalizing
+            }
+            
+            //smh
+            if (profile.TryGet<ShadowsMidtonesHighlights>(out smh))
+            {
+                varColor = currentTransition.smhHighlights.Evaluate(lerpValue);
+                smh.highlights.SetValue(new UnityEngine.Rendering.Vector4Parameter(new Vector4(varColor.r,varColor.g,varColor.b,1)));
+                varColor = currentTransition.smhShadows.Evaluate(lerpValue);
+                smh.shadows.SetValue(new UnityEngine.Rendering.Vector4Parameter(new Vector4(varColor.r, varColor.g, varColor.b, 1)));
+                varColor = currentTransition.smhMidtones.Evaluate(lerpValue);
+                smh.midtones.SetValue(new UnityEngine.Rendering.Vector4Parameter(new Vector4(varColor.r, varColor.g, varColor.b, 1)));
+
+                smh.highlightsStart.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.smhHighlightStart.Evaluate(lerpValue).r)); //needs normalizing
+                smh.highlightsEnd.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.smhHighlightEnd.Evaluate(lerpValue).r)); //needs normalizing
+                smh.shadowsStart.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.smhShadowStart.Evaluate(lerpValue).r)); //needs normalizing
+                smh.shadowsEnd.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.smhShadowEnd.Evaluate(lerpValue).r)); //needs normalizing
+            }
+
     }
 }

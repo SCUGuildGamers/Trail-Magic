@@ -12,6 +12,7 @@ public class TransitionData : ScriptableObject
     public Gradient skyTopColor;
     public Gradient skyBottomColor;
     public Gradient skyGradExponent;
+
     public Gradient sunColor;
 
     //fog settings
@@ -54,4 +55,10 @@ public class TransitionData : ScriptableObject
 
     public Gradient smhHighlightStart;
     public Gradient smhHighlightEnd;
+
+    //trees
+    public Gradient bigTrunkColor;
+    public Gradient bigLeafColor;
+    public Gradient smallTrunkColor;
+    public Gradient smallLeafColor;
 }
