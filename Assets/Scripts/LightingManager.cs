@@ -72,7 +72,7 @@ public class LightingManager : MonoBehaviour
             //skyboxMat.SetColor("_SkyGradientBottom", currentTransition.skyBoxIntensity.Evaluate(lerpValue));
             skyboxMat.SetColor("_SkyGradientTop", currentTransition.skyTopColor.Evaluate(lerpValue));
             skyboxMat.SetColor("_SkyGradientBottom", currentTransition.skyBottomColor.Evaluate(lerpValue));
-            skyboxMat.SetColor("_SkyGradientExponent", currentTransition.skyGradExponent.Evaluate(lerpValue));
+            skyboxMat.SetFloat("_SkyGradientExponent", currentTransition.skyGradExponent.Evaluate(lerpValue).r);//needs to be normalized
 
             if (lerpValue >= 1.0f)
             {
