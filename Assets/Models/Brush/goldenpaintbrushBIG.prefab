@@ -259,6 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4167510365467458946}
   - component: {fileID: 2502144379027006328}
+  - component: {fileID: 1515161195711779372}
   m_Layer: 0
   m_Name: goldenpaintbrushBIG
   m_TagString: Untagged
@@ -305,3 +306,36 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.04202652, y: 0.9925109, z: 0.084106445}
   m_Center: {x: -0.019197464, y: 0.5051642, z: -0.0051879883}
+--- !u!205 &1515161195711779372
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8277550071580665722}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.013578221, y: 0.49469575, z: -0.0043239594}
+  m_Size: 1.0302117
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1982127029058755090}
+    - renderer: {fileID: 327715606161970564}
+    - renderer: {fileID: 933687777521549118}
+  - screenRelativeHeight: 0.3
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1982127029058755090}
+    - renderer: {fileID: 327715606161970564}
+    - renderer: {fileID: 933687777521549118}
+  - screenRelativeHeight: 0.1
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1982127029058755090}
+    - renderer: {fileID: 327715606161970564}
+    - renderer: {fileID: 933687777521549118}
+  m_Enabled: 1
