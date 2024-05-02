@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.23529412, g: 0.49803922, b: 0.5764706, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.003
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1884037031}
-  m_IndirectSpecularColor: {r: 0.5016983, g: 0.8312913, b: 0.98807174, a: 1}
+  m_IndirectSpecularColor: {r: 0.47491544, g: 0.39408398, b: 0.54008865, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4059,7 +4059,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &213190771
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4216,12 +4216,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 217532256}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 490, y: 91, z: 999.9}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 335, y: -27, z: 1019.4}
   m_LocalScale: {x: 1000, y: 200, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 972633525}
+  m_Father: {fileID: 316300278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &217532258
 BoxCollider:
@@ -5577,6 +5577,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316145414}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &316300277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 316300278}
+  m_Layer: 0
+  m_Name: John objects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &316300278
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316300277}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 217532257}
+  - {fileID: 1737114688}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &319165873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13960,8 +13993,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794315047}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.007725127, y: 0.4115297, z: 0.00088230724, w: 0.91136324}
-  m_LocalPosition: {x: 1338.37, y: 340.05, z: -492.09}
+  m_LocalRotation: {x: -0.0075309677, y: 0.70980144, z: -0.0019340575, w: 0.704359}
+  m_LocalPosition: {x: 933.8, y: 209.7, z: -13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13971,7 +14004,7 @@ Transform:
   - {fileID: 1618646027}
   - {fileID: 1329098350}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -0.848, y: 48.605, z: -0.272}
+  m_LocalEulerAnglesHint: {x: -0.451, y: 90.444, z: -0.769}
 --- !u!1001 &811940754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16974,9 +17007,7 @@ Transform:
   m_LocalPosition: {x: -1733.9673, y: -342.58588, z: -73.90124}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 217532257}
-  - {fileID: 1737114688}
+  m_Children: []
   m_Father: {fileID: 2041654633}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &973897731
@@ -36819,11 +36850,11 @@ Transform:
   m_GameObject: {fileID: 1737114687}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7106245, z: -0, w: 0.70357156}
-  m_LocalPosition: {x: 3, y: 91, z: 508}
+  m_LocalPosition: {x: -152, y: -27, z: 527.5}
   m_LocalScale: {x: 1000, y: 200, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 972633525}
+  m_Father: {fileID: 316300278}
   m_LocalEulerAnglesHint: {x: 0, y: -90.571, z: 0}
 --- !u!65 &1737114689
 BoxCollider:
@@ -46957,3 +46988,4 @@ SceneRoots:
   - {fileID: 980735086}
   - {fileID: 1706013166}
   - {fileID: 213190772}
+  - {fileID: 316300278}
