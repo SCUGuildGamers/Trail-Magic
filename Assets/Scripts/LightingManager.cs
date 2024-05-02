@@ -24,6 +24,12 @@ public class LightingManager : MonoBehaviour
     private ColorAdjustments ca;
     private ShadowsMidtonesHighlights smh;
 
+    //tree materials
+    [SerializeField] Material tallTrunkMat;
+    [SerializeField] Material tallBranchMat;
+    [SerializeField] Material shortTrunkMat;
+    [SerializeField] Material shortBranchMat;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +46,7 @@ public class LightingManager : MonoBehaviour
 
             SetSkyColors();
             SetDirectionalLight();
+            SetFog();
             SetGlobalVolume();
         }
         else
@@ -81,13 +88,19 @@ public class LightingManager : MonoBehaviour
         {
             TransitionData currentTransition = transitions[currentTransitionIndex];
             sun.color = currentTransition.emissionColor.Evaluate(lerpValue);
-            sun.intensity = currentTransition.emissionIntensity.Evaluate(lerpValue).r;
+            sun.intensity = currentTransition.emissionIntensity.Evaluate(lerpValue).r; //needs to be normalized
         }
     }
 
-    void setFog()
+    void SetFog()
     {
-
+        if (transitions.Length > 0)
+        {
+            TransitionData currentTransition = transitions[currentTransitionIndex];
+            Color varColor = currentTransition.fogColor.Evaluate(lerpValue);
+            RenderSettings.fogColor = currentTransition.fogColor.Evaluate(lerpValue);
+            RenderSettings.fogDensity = currentTransition.fogDensity.Evaluate(lerpValue).r;//needs normalizing
+        }
     }
 
     void SetIdleColors()
@@ -109,7 +122,7 @@ public class LightingManager : MonoBehaviour
             //translating color to float -> (color.r)/255*[difference between min and max]+min
 
             //bloom
-            if(profile.TryGet<Bloom>(out bloom))
+            if (profile.TryGet<Bloom>(out bloom))
             {
                 bloom.threshold.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.bloomThreshhold.Evaluate(lerpValue).r));//needs normalizing
                 bloom.intensity.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.bloomIntensity.Evaluate(lerpValue).r));//needs normalizing
@@ -133,16 +146,16 @@ public class LightingManager : MonoBehaviour
                 ca.postExposure.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.adjustPostExposure.Evaluate(lerpValue).r));//needs normalizing
                 ca.contrast.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.adjustContrast.Evaluate(lerpValue).r));//needs normalizing
                 varColor = currentTransition.adjustColorFilter.Evaluate(lerpValue);
-                ca.colorFilter.SetValue(new UnityEngine.Rendering.Vector4Parameter(new Vector4(varColor.r,varColor.g,varColor.b,1)));
+                ca.colorFilter.SetValue(new UnityEngine.Rendering.Vector4Parameter(new Vector4(varColor.r, varColor.g, varColor.b, 1)));
                 ca.hueShift.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.adjustHueShift.Evaluate(lerpValue).r));//needs normalizing
                 ca.saturation.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.adjustSaturation.Evaluate(lerpValue).r));//needs normalizing
             }
-            
+
             //smh
             if (profile.TryGet<ShadowsMidtonesHighlights>(out smh))
             {
                 varColor = currentTransition.smhHighlights.Evaluate(lerpValue);
-                smh.highlights.SetValue(new UnityEngine.Rendering.Vector4Parameter(new Vector4(varColor.r,varColor.g,varColor.b,1)));
+                smh.highlights.SetValue(new UnityEngine.Rendering.Vector4Parameter(new Vector4(varColor.r, varColor.g, varColor.b, 1)));
                 varColor = currentTransition.smhShadows.Evaluate(lerpValue);
                 smh.shadows.SetValue(new UnityEngine.Rendering.Vector4Parameter(new Vector4(varColor.r, varColor.g, varColor.b, 1)));
                 varColor = currentTransition.smhMidtones.Evaluate(lerpValue);
@@ -154,5 +167,23 @@ public class LightingManager : MonoBehaviour
                 smh.shadowsEnd.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.smhShadowEnd.Evaluate(lerpValue).r)); //needs normalizing
             }
 
+        }
+    }
+
+    void SetTrees() 
+    {
+        if (transitions.Length > 0)
+        {
+            TransitionData currentTransition = transitions[currentTransitionIndex];
+            //tall trees
+            tallTrunkMat.color = currentTransition.tallTrunkColor.Evaluate(lerpValue);
+            tallBranchMat.SetColor("_branchtint", currentTransition.tallTrunkColor.Evaluate(lerpValue));
+            tallBranchMat.SetColor("_leafTint", currentTransition.tallLeafColor.Evaluate(lerpValue));
+
+            //short trees
+            shortTrunkMat.color = currentTransition.shortTrunkColor.Evaluate(lerpValue);
+            shortBranchMat.SetColor("_branchtint", currentTransition.shortTrunkColor.Evaluate(lerpValue));
+            shortBranchMat.SetColor("_leafTint", currentTransition.shortLeafColor.Evaluate(lerpValue));
+        }
     }
 }

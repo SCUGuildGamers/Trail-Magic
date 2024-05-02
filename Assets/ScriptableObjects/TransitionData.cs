@@ -57,8 +57,8 @@ public class TransitionData : ScriptableObject
     public Gradient smhHighlightEnd;
 
     //trees
-    public Gradient bigTrunkColor;
-    public Gradient bigLeafColor;
-    public Gradient smallTrunkColor;
-    public Gradient smallLeafColor;
+    public Gradient tallTrunkColor;
+    public Gradient tallLeafColor;
+    public Gradient shortTrunkColor;
+    public Gradient shortLeafColor;
 }
