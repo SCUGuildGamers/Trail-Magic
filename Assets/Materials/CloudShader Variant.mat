@@ -23,7 +23,7 @@ Material:
   m_Name: CloudShader Variant
   m_Shader: {fileID: -6465566751694194690, guid: 1bef186779984ea4cb3962823169270b, type: 3}
   m_Parent: {fileID: -876546973899608171, guid: 1bef186779984ea4cb3962823169270b, type: 3}
-  m_ModifiedSerializedProperties: 2
+  m_ModifiedSerializedProperties: 6
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 2
@@ -38,13 +38,13 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _CloudScale: 200.9
-    - _CloudsAlpha: 3.68
-    - _CloudsPower: 0.6
-    - _DistortScale: 38.6
+    - _CloudScale: 177.3
+    - _CloudsAlpha: 33.1
+    - _CloudsPower: 0.55
+    - _DistortScale: -21.7
     - _QueueControl: 0
     m_Colors:
     - _CloudSpeed: {r: 0.002, g: 0.002, b: 0, a: 0}
-    - _CloudsColor: {r: 0.81886786, g: 0.70917046, b: 0.8147711, a: 1}
+    - _CloudsColor: {r: 0.34528297, g: 0.9680726, b: 1, a: 1}
     - _DistortSpeed: {r: 0.01, g: 0.01, b: 0, a: 0}
   m_BuildTextureStacks: []
