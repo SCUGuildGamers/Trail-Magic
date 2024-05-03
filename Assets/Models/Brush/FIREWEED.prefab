@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4601263525548888492}
   - component: {fileID: 7729644379338348410}
+  - component: {fileID: 6823926374131154555}
   m_Layer: 0
   m_Name: FIREWEED
   m_TagString: Untagged
@@ -77,6 +78,27 @@ LODGroup:
     - renderer: {fileID: 2471395062606851015}
     - renderer: {fileID: 3946389432018006939}
   m_Enabled: 1
+--- !u!65 &6823926374131154555
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140918961057456780}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09719086, y: 1.8452759, z: 0.12921143}
+  m_Center: {x: -0.0007972717, y: 0.92684937, z: 0.006439209}
 --- !u!1 &4395088986608652757
 GameObject:
   m_ObjectHideFlags: 0
