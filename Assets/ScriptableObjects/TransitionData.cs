@@ -25,6 +25,9 @@ public class TransitionData : ScriptableObject
     public Gradient emissionColor;
     public Gradient emissionIntensity;
 
+    public Gradient lightRotationX;
+    public float[] lightRotationXTest = new float[2];
+
 
     //bloom
     public Gradient bloomThreshhold;

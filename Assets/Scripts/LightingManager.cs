@@ -69,7 +69,7 @@ public class LightingManager : MonoBehaviour
             TransitionData currentTransition = transitions[currentTransitionIndex];
 
             // Apply sky colors from the current transition data
-            //skyboxMat.SetColor("_SkyGradientBottom", currentTransition.skyBoxIntensity.Evaluate(lerpValue));
+            skyboxMat.SetColor("_SkyGradientBottom", currentTransition.skyBoxIntensity.Evaluate(lerpValue));
             skyboxMat.SetColor("_SkyGradientTop", currentTransition.skyTopColor.Evaluate(lerpValue));
             skyboxMat.SetColor("_SkyGradientBottom", currentTransition.skyBottomColor.Evaluate(lerpValue));
             skyboxMat.SetFloat("_SkyGradientExponent", currentTransition.skyGradExponent.Evaluate(lerpValue).r);//needs to be normalized
@@ -89,6 +89,7 @@ public class LightingManager : MonoBehaviour
             TransitionData currentTransition = transitions[currentTransitionIndex];
             sun.color = currentTransition.emissionColor.Evaluate(lerpValue);
             sun.intensity = currentTransition.emissionIntensity.Evaluate(lerpValue).r; //needs to be normalized
+            sun.transform.rotation = Quaternion.Euler(new Vector3(Mathf.Lerp(currentTransition.lightRotationXTest[0], currentTransition.lightRotationXTest[1], lerpValue), 90f, 0f));
         }
     }
 
@@ -99,7 +100,7 @@ public class LightingManager : MonoBehaviour
             TransitionData currentTransition = transitions[currentTransitionIndex];
             Color varColor = currentTransition.fogColor.Evaluate(lerpValue);
             RenderSettings.fogColor = currentTransition.fogColor.Evaluate(lerpValue);
-            RenderSettings.fogDensity = currentTransition.fogDensity.Evaluate(lerpValue).r;//needs normalizing
+            RenderSettings.fogDensity = currentTransition.fogDensity.Evaluate(lerpValue).r; //needs normalizing
         }
     }
 
