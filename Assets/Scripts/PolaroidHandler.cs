@@ -5,10 +5,12 @@ using UnityEngine;
 public class PolaroidHandler : MonoBehaviour
 {   [SerializeField] string polaroidTag;
     [SerializeField] GameObject polaroidCam;
+    [SerializeField] GameObject eightiesPolaroid;
+    [SerializeField] GameObject ninetiesPolaroid;
+    [SerializeField] GameObject bwPolaroid;
 
     [SerializeField] private GameObject floatingTextPrefab;
     private GameObject uiElement;
-
     private bool polaroidState;
     
     void Start() {
@@ -23,14 +25,29 @@ public class PolaroidHandler : MonoBehaviour
 
     void OnTriggerEnter(Collider collider) {
         if(collider.gameObject.tag == polaroidTag) {
-            Debug.Log("Triggered with: " + collider.gameObject.name);
+            Debug.Log("Entering!");
             polaroidState = true; 
+            string era = collider.gameObject.GetComponent<PolaroidArea>().getTimeframe();
+            if(era == "bw") {
+                eightiesPolaroid.SetActive(true);
+            }
+            else if (era == "80s") {
+                ninetiesPolaroid.SetActive(true);
+            }
+            else if (era == "90s") {
+                bwPolaroid.SetActive(true);
+            }  
+            else {
+                eightiesPolaroid.SetActive(false);
+                ninetiesPolaroid.SetActive(false);
+                bwPolaroid.SetActive(false);
+            }
         }
     }
 
     void OnTriggerExit(Collider collider) {
         if(collider.gameObject.tag == polaroidTag) {
-            Debug.Log("Triggered with: " + collider.gameObject.name);
+            Debug.Log("Exiting!");
             polaroidState = false;
         }
     }
@@ -38,9 +55,9 @@ public class PolaroidHandler : MonoBehaviour
     void PolaroidStateHandler () {
         if (polaroidState == true) {
             uiElement.SetActive(true);
-            if (Input.GetKey(KeyCode.Space)) {
-                Debug.Log("space");
-                polaroidCam.SetActive(true);
+            if (Input.GetKey("space")) {
+                Debug.Log("Space was pressed");
+                polaroidCam.SetActive(true); 
                 uiElement.SetActive(false);
             }
         }
