@@ -74,7 +74,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _SkyGradientExponent: 0.4005928
+    - _SkyGradientExponent: 0.4647471
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -88,8 +88,8 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HorizonLineColor: {r: 0.30588233, g: 0.96862745, b: 0.9583086, a: 1}
-    - _SkyGradientBottom: {r: 0.30603346, g: 0.9674535, b: 0.95676976, a: 1}
-    - _SkyGradientTop: {r: 0.07725304, g: 0.55372, b: 0.8825738, a: 1}
+    - _SkyGradientBottom: {r: 0.32238653, g: 0.84040284, b: 0.94670635, a: 1}
+    - _SkyGradientTop: {r: 0.3741238, g: 0.6380011, b: 0.9064744, a: 1}
     - _SunDiscColor: {r: 1, g: 0.9956156, b: 0.9056604, a: 1}
     - _SunHaloColor: {r: 0.8980392, g: 0.8762909, b: 0.6666667, a: 1}
   m_BuildTextureStacks: []
