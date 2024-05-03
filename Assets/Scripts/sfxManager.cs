@@ -5,6 +5,8 @@ using UnityEngine;
 public class sfxManager : MonoBehaviour
 {
     [SerializeField]
+    private int musicWait = 180;
+    [SerializeField]
     private int minWaitTime = 8;
     [SerializeField]
     private int maxWaitTime = 20;
@@ -31,7 +33,7 @@ IEnumerator playNewSFX()
         waitTime = rnd.Next(minWaitTime, maxWaitTime);
         yield return new WaitForSeconds(waitTime);
 
-        int soundIndex = rnd.Next(0, soundCount-1);
+        int soundIndex = rnd.Next(0, soundCount);
         AudioSource selectedSFX = soundList[soundIndex];
 
         canPlay = true;
@@ -43,17 +45,8 @@ IEnumerator playNewSFX()
         if (canPlay)
         {
             selectedSFX.Play();
-            Debug.Log("Sound selected: " + selectedSFX.gameObject.name + ". Next sound playing in: " + waitTime);
-        }
-        else
-        {
-            Debug.LogWarning("No sounds are available to play.");
+            /*Debug.Log("Sound selected: " + selectedSFX.gameObject.name + ". Next sound playing in: " + waitTime);*/
         }
     }
 }
-
-    void Update()
-    {
-        //continue;
-    }
 }
