@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1884037031}
-  m_IndirectSpecularColor: {r: 0.47491544, g: 0.39408398, b: 0.54008865, a: 1}
+  m_IndirectSpecularColor: {r: 0.33186945, g: 0.96417886, b: 0.9902943, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13993,8 +13993,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794315047}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0075309677, y: 0.70980144, z: -0.0019340575, w: 0.704359}
-  m_LocalPosition: {x: 933.8, y: 209.7, z: -13}
+  m_LocalRotation: {x: -0.0035541733, y: 0.8440879, z: 0.0069154766, w: -0.5361485}
+  m_LocalPosition: {x: 643, y: 205.82, z: -771.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14004,7 +14004,7 @@ Transform:
   - {fileID: 1618646027}
   - {fileID: 1329098350}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -0.451, y: 90.444, z: -0.769}
+  m_LocalEulerAnglesHint: {x: -0.451, y: 244.849, z: -0.769}
 --- !u!1001 &811940754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17259,6 +17259,11 @@ MonoBehaviour:
   lerpValue: 0
   usingGrad: 1
   transitionDuration: 60
+  profile: {fileID: 0}
+  tallTrunkMat: {fileID: 0}
+  tallBranchMat: {fileID: 0}
+  shortTrunkMat: {fileID: 0}
+  shortBranchMat: {fileID: 0}
 --- !u!4 &980735086
 Transform:
   m_ObjectHideFlags: 0
