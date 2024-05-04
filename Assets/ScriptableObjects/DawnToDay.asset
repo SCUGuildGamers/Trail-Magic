@@ -313,9 +313,12 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   lightRotationX:
+  - 0
+  - 60
+  volumeWeight:
     serializedVersion: 2
-    key0: {r: 0, g: 0, b: 0, a: 1}
-    key1: {r: 0.18039216, g: 0.18039216, b: 0.18039216, a: 1}
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -342,10 +345,10 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  lightRotationXTest:
-  - 0
-  - 60
-  bloomThreshhold:
+  profile:
+  - {fileID: 11400000, guid: 556446289b2c99447b1ae252b96242d5, type: 2}
+  - {fileID: 11400000, guid: 2ff7592c0cea33443bdd84d9c2180720, type: 2}
+  bloomThreshold:
     serializedVersion: 2
     key0: {r: 0.6, g: 0.6, b: 0.6, a: 1}
     key1: {r: 0.6, g: 0.6, b: 0.6, a: 1}
@@ -917,8 +920,8 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   tallTrunkColor:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
+    key0: {r: 0.24952886, g: 0, b: 0.6179246, a: 1}
+    key1: {r: 0.5019608, g: 0.30980393, b: 0.07450981, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -947,8 +950,8 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   tallLeafColor:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
+    key0: {r: 0.4867382, g: 0, b: 1, a: 1}
+    key1: {r: 0.22352943, g: 0.9843138, b: 0.16862746, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -977,8 +980,8 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   shortTrunkColor:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
+    key0: {r: 0.2509804, g: 0, b: 0.61960787, a: 1}
+    key1: {r: 0.5058824, g: 0.3137255, b: 0.09019608, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -1007,8 +1010,8 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   shortLeafColor:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
+    key0: {r: 0.48627454, g: 0, b: 1, a: 1}
+    key1: {r: 0.22352943, g: 0.9843138, b: 0.16862746, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}

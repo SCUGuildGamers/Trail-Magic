@@ -30,6 +30,13 @@ public class LightingManager : MonoBehaviour
     [SerializeField] Material shortTrunkMat;
     [SerializeField] Material shortBranchMat;
 
+    //[SerializeField] Volume dawnProfile;
+    //[SerializeField] Volume dayProfile;
+    //[SerializeField] Volume eveningProfile;
+    //[SerializeField] Volume nightProfile;
+
+    [SerializeField] Volume[] profiles = new Volume[4];
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +54,15 @@ public class LightingManager : MonoBehaviour
             SetSkyColors();
             SetDirectionalLight();
             SetFog();
-            SetGlobalVolume();
+            //SetGlobalVolume();
+            WeighVolumes();
+            SetTrees();
+
+            if (lerpValue >= 1.0f)
+            {
+                currentTransitionIndex = (currentTransitionIndex + 1) % transitions.Length;
+                transitionStartTime = Time.time;
+            }
         }
         else
         {
@@ -72,13 +87,7 @@ public class LightingManager : MonoBehaviour
             skyboxMat.SetColor("_SkyGradientBottom", currentTransition.skyBoxIntensity.Evaluate(lerpValue));
             skyboxMat.SetColor("_SkyGradientTop", currentTransition.skyTopColor.Evaluate(lerpValue));
             skyboxMat.SetColor("_SkyGradientBottom", currentTransition.skyBottomColor.Evaluate(lerpValue));
-            skyboxMat.SetFloat("_SkyGradientExponent", currentTransition.skyGradExponent.Evaluate(lerpValue).r);//needs to be normalized
-
-            if (lerpValue >= 1.0f)
-            {
-                currentTransitionIndex = (currentTransitionIndex + 1) % transitions.Length;
-                transitionStartTime = Time.time;
-            }
+            skyboxMat.SetFloat("_SkyGradientExponent", (currentTransition.skyGradExponent.Evaluate(lerpValue).r / 255 * 5));//needs to be normalized
         }
     }
 
@@ -88,8 +97,8 @@ public class LightingManager : MonoBehaviour
         {
             TransitionData currentTransition = transitions[currentTransitionIndex];
             sun.color = currentTransition.emissionColor.Evaluate(lerpValue);
-            sun.intensity = currentTransition.emissionIntensity.Evaluate(lerpValue).r; //needs to be normalized
-            sun.transform.rotation = Quaternion.Euler(new Vector3(Mathf.Lerp(currentTransition.lightRotationXTest[0], currentTransition.lightRotationXTest[1], lerpValue), 90f, 0f));
+            sun.intensity = currentTransition.emissionIntensity.Evaluate(lerpValue).r / 255 * 5; //needs to be normalized
+            sun.transform.rotation = Quaternion.Euler(new Vector3(Mathf.Lerp(currentTransition.lightRotationX[0], currentTransition.lightRotationX[1], lerpValue), 90f, 0f));
         }
     }
 
@@ -100,7 +109,7 @@ public class LightingManager : MonoBehaviour
             TransitionData currentTransition = transitions[currentTransitionIndex];
             Color varColor = currentTransition.fogColor.Evaluate(lerpValue);
             RenderSettings.fogColor = currentTransition.fogColor.Evaluate(lerpValue);
-            RenderSettings.fogDensity = currentTransition.fogDensity.Evaluate(lerpValue).r; //needs normalizing
+            RenderSettings.fogDensity = currentTransition.fogDensity.Evaluate(lerpValue).r / 255; //needs normalizing
         }
     }
 
@@ -111,6 +120,17 @@ public class LightingManager : MonoBehaviour
         sun.color = timeData.sunColor;
     }
 
+    void WeighVolumes()
+    {
+        if (transitions.Length > 0)
+        {
+            Volume currentVolume = profiles[currentTransitionIndex];
+            Volume nextVolume = profiles[(currentTransitionIndex + 1) % transitions.Length];
+
+            currentVolume.weight = 1 - lerpValue;
+            nextVolume.weight = lerpValue;
+        }
+    }
     void SetGlobalVolume()
     {
         if (transitions.Length > 0)
@@ -125,9 +145,9 @@ public class LightingManager : MonoBehaviour
             //bloom
             if (profile.TryGet<Bloom>(out bloom))
             {
-                bloom.threshold.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.bloomThreshhold.Evaluate(lerpValue).r));//needs normalizing
-                bloom.intensity.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.bloomIntensity.Evaluate(lerpValue).r));//needs normalizing
-                bloom.scatter.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.bloomScatter.Evaluate(lerpValue).r));//needs normalizing
+                bloom.threshold.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.bloomThreshold.Evaluate(lerpValue).r /255 * (10-0)));//needs normalizing
+                bloom.intensity.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.bloomIntensity.Evaluate(lerpValue).r / 255 * 0.6f+.1f));//needs normalizing
+                bloom.scatter.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.bloomScatter.Evaluate(lerpValue).r / 255));//needs normalizing
                 varColor = currentTransition.bloomTint.Evaluate(lerpValue);
                 bloom.tint.SetValue(new UnityEngine.Rendering.Vector4Parameter(new Vector4(varColor.r, varColor.g, varColor.b, 1)));
             }
@@ -137,19 +157,19 @@ public class LightingManager : MonoBehaviour
             {
                 varColor = currentTransition.vignetteColor.Evaluate(lerpValue);
                 vignette.color.SetValue(new UnityEngine.Rendering.Vector4Parameter(new Vector4(varColor.r, varColor.g, varColor.b, 1)));
-                vignette.intensity.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.vignetteIntensity.Evaluate(lerpValue).r));//needs normalizing
-                vignette.smoothness.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.vignetteSmoothness.Evaluate(lerpValue).r));//needs normalizing
+                vignette.intensity.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.vignetteIntensity.Evaluate(lerpValue).r / 255));//needs normalizing
+                vignette.smoothness.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.vignetteSmoothness.Evaluate(lerpValue).r / 255));//needs normalizing
             }
 
             //color adjustments
             if (profile.TryGet<ColorAdjustments>(out ca))
             {
-                ca.postExposure.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.adjustPostExposure.Evaluate(lerpValue).r));//needs normalizing
-                ca.contrast.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.adjustContrast.Evaluate(lerpValue).r));//needs normalizing
+                ca.postExposure.SetValue(new UnityEngine.Rendering.FloatParameter((currentTransition.adjustPostExposure.Evaluate(lerpValue).r / 255 * (0.29f+0.17f) -0.17f)));//needs normalizing
+                ca.contrast.SetValue(new UnityEngine.Rendering.FloatParameter((currentTransition.adjustContrast.Evaluate(lerpValue).r / 255 *(200)) -100));//needs normalizing
                 varColor = currentTransition.adjustColorFilter.Evaluate(lerpValue);
                 ca.colorFilter.SetValue(new UnityEngine.Rendering.Vector4Parameter(new Vector4(varColor.r, varColor.g, varColor.b, 1)));
-                ca.hueShift.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.adjustHueShift.Evaluate(lerpValue).r));//needs normalizing
-                ca.saturation.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.adjustSaturation.Evaluate(lerpValue).r));//needs normalizing
+                ca.hueShift.SetValue(new UnityEngine.Rendering.FloatParameter((currentTransition.adjustHueShift.Evaluate(lerpValue).r / 255 *360) - 180));//needs normalizing
+                ca.saturation.SetValue(new UnityEngine.Rendering.FloatParameter((currentTransition.adjustSaturation.Evaluate(lerpValue).r / 255 *200)-100));//needs normalizing
             }
 
             //smh
@@ -162,10 +182,10 @@ public class LightingManager : MonoBehaviour
                 varColor = currentTransition.smhMidtones.Evaluate(lerpValue);
                 smh.midtones.SetValue(new UnityEngine.Rendering.Vector4Parameter(new Vector4(varColor.r, varColor.g, varColor.b, 1)));
 
-                smh.highlightsStart.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.smhHighlightStart.Evaluate(lerpValue).r)); //needs normalizing
-                smh.highlightsEnd.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.smhHighlightEnd.Evaluate(lerpValue).r)); //needs normalizing
-                smh.shadowsStart.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.smhShadowStart.Evaluate(lerpValue).r)); //needs normalizing
-                smh.shadowsEnd.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.smhShadowEnd.Evaluate(lerpValue).r)); //needs normalizing
+                smh.highlightsStart.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.smhHighlightStart.Evaluate(lerpValue).r / 255 * 0.68f )); //needs normalizing
+                smh.highlightsEnd.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.smhHighlightEnd.Evaluate(lerpValue).r / 255)); //needs normalizing
+                smh.shadowsStart.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.smhShadowStart.Evaluate(lerpValue).r / 255)); //needs normalizing
+                smh.shadowsEnd.SetValue(new UnityEngine.Rendering.FloatParameter(currentTransition.smhShadowEnd.Evaluate(lerpValue).r / 255 *0.7f)); //needs normalizing
             }
 
         }
