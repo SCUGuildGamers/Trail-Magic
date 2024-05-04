@@ -87,7 +87,7 @@ public class LightingManager : MonoBehaviour
             skyboxMat.SetColor("_SkyGradientBottom", currentTransition.skyBoxIntensity.Evaluate(lerpValue));
             skyboxMat.SetColor("_SkyGradientTop", currentTransition.skyTopColor.Evaluate(lerpValue));
             skyboxMat.SetColor("_SkyGradientBottom", currentTransition.skyBottomColor.Evaluate(lerpValue));
-            skyboxMat.SetFloat("_SkyGradientExponent", (currentTransition.skyGradExponent.Evaluate(lerpValue).r / 255 * 5));//needs to be normalized
+            skyboxMat.SetFloat("_SkyGradientExponent", (currentTransition.skyGradExponent.Evaluate(lerpValue).r * 5));//needs to be normalized (Color.r returns float between 0-1)
         }
     }
 
@@ -97,7 +97,8 @@ public class LightingManager : MonoBehaviour
         {
             TransitionData currentTransition = transitions[currentTransitionIndex];
             sun.color = currentTransition.emissionColor.Evaluate(lerpValue);
-            sun.intensity = currentTransition.emissionIntensity.Evaluate(lerpValue).r / 255 * 5; //needs to be normalized
+            Debug.Log(currentTransition.emissionIntensity.Evaluate(lerpValue).r);
+            sun.intensity = currentTransition.emissionIntensity.Evaluate(lerpValue).r * 5; //needs to be normalized
             sun.transform.rotation = Quaternion.Euler(new Vector3(Mathf.Lerp(currentTransition.lightRotationX[0], currentTransition.lightRotationX[1], lerpValue), 90f, 0f));
         }
     }
@@ -109,7 +110,7 @@ public class LightingManager : MonoBehaviour
             TransitionData currentTransition = transitions[currentTransitionIndex];
             Color varColor = currentTransition.fogColor.Evaluate(lerpValue);
             RenderSettings.fogColor = currentTransition.fogColor.Evaluate(lerpValue);
-            RenderSettings.fogDensity = currentTransition.fogDensity.Evaluate(lerpValue).r / 255; //needs normalizing
+            RenderSettings.fogDensity = currentTransition.fogDensity.Evaluate(lerpValue).r * 5; //needs normalizing
         }
     }
 
