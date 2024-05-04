@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck; // A game object that is placed at the player's feet
     public float groundDistance = 0.4f; // Radius of the sphere that checks if the player is on the ground
     public LayerMask groundMask; // Ground layer
-    private AudioSource footsteps;
+    public AudioSource footsteps;
 
     Vector3 velocity;
     bool isGrounded; // True if the player is on the ground

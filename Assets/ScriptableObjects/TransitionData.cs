@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/TransitionData", order = 1)]
 
@@ -25,12 +26,14 @@ public class TransitionData : ScriptableObject
     public Gradient emissionColor;
     public Gradient emissionIntensity;
 
-    public Gradient lightRotationX;
-    public float[] lightRotationXTest = new float[2];
+    //public Gradient lightRotationX;
+    public float[] lightRotationX = new float[2];
 
+    public Gradient volumeWeight; // needs to be inputted
+    public VolumeProfile profile; // needs to be inputted
 
     //bloom
-    public Gradient bloomThreshhold;
+    public Gradient bloomThreshold;
     public Gradient bloomIntensity;
     public Gradient bloomScatter;
     public Gradient bloomTint;
@@ -44,7 +47,7 @@ public class TransitionData : ScriptableObject
     //color adjustments
     public Gradient adjustPostExposure;
     public Gradient adjustContrast;
-    public Gradient adjustColorFilter;
+    public Gradient adjustColorFilter; // needs to be fully inputted
     public Gradient adjustHueShift;
     public Gradient adjustSaturation;
 
@@ -57,7 +60,7 @@ public class TransitionData : ScriptableObject
     public Gradient smhShadowEnd;
 
     public Gradient smhHighlightStart;
-    public Gradient smhHighlightEnd;
+    public Gradient smhHighlightEnd; // needs to be inputted
 
     //trees
     public Gradient tallTrunkColor;
