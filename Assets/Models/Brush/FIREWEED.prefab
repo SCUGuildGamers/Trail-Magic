@@ -56,7 +56,6 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 1813061439984805421}
-    - renderer: {fileID: 0}
     - renderer: {fileID: 3302019898220843914}
     - renderer: {fileID: 8042946094880181491}
     - renderer: {fileID: 3946389432018006939}
@@ -65,7 +64,6 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 1813061439984805421}
-    - renderer: {fileID: 0}
     - renderer: {fileID: 3302019898220843914}
     - renderer: {fileID: 8042946094880181491}
     - renderer: {fileID: 3946389432018006939}
