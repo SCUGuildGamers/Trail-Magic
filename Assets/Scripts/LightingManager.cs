@@ -97,7 +97,6 @@ public class LightingManager : MonoBehaviour
         {
             TransitionData currentTransition = transitions[currentTransitionIndex];
             sun.color = currentTransition.emissionColor.Evaluate(lerpValue);
-            Debug.Log(currentTransition.emissionIntensity.Evaluate(lerpValue).r);
             sun.intensity = currentTransition.emissionIntensity.Evaluate(lerpValue).r * 5; //needs to be normalized
             sun.transform.rotation = Quaternion.Euler(new Vector3(Mathf.Lerp(currentTransition.lightRotationX[0], currentTransition.lightRotationX[1], lerpValue), 90f, 0f));
         }
