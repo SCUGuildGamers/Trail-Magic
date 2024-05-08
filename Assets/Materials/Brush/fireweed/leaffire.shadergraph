@@ -1850,7 +1850,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "cefc006132fe482788d1d7330f3de53f",
     "m_Id": 0,
-    "m_DisplayName": "flowercolor",
+    "m_DisplayName": "leaftint",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
