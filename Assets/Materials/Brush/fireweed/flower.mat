@@ -44,7 +44,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _flowertint: {r: 0.9764151, g: 0.7254902, b: 0.95375675, a: 1}
+    - _flowertint: {r: 0.759434, g: 0.25792095, b: 0.56353045, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &3398972336531602884
 MonoBehaviour:

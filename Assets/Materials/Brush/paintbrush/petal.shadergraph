@@ -2,7 +2,11 @@
     "m_SGVersion": 3,
     "m_Type": "UnityEditor.ShaderGraph.GraphData",
     "m_ObjectId": "e764035c7cef451d8254ba3c83c370d4",
-    "m_Properties": [],
+    "m_Properties": [
+        {
+            "m_Id": "74038a30a7e34c6eace914a9ad46b139"
+        }
+    ],
     "m_Keywords": [],
     "m_Dropdowns": [],
     "m_CategoryData": [
@@ -377,10 +381,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -925.770263671875,
-            "y": -23.181716918945314,
-            "width": 208.0001220703125,
-            "height": 433.9999694824219
+            "x": -970.5000610351563,
+            "y": -59.49997329711914,
+            "width": 208.00006103515626,
+            "height": 434.0
         }
     },
     "m_Slots": [
@@ -1134,10 +1138,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -754.5000610351563,
-            "y": 306.0,
-            "width": 208.0,
-            "height": 278.00006103515627
+            "x": -560.5,
+            "y": 337.0,
+            "width": 207.99993896484376,
+            "height": 278.0
         }
     },
     "m_Slots": [
@@ -1285,6 +1289,36 @@
 }
 
 {
+    "m_SGVersion": 3,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.ColorShaderProperty",
+    "m_ObjectId": "74038a30a7e34c6eace914a9ad46b139",
+    "m_Guid": {
+        "m_GuidSerialized": "c4644edb-3188-40e7-98d3-059d89ee9a19"
+    },
+    "m_Name": "petaltint",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "petaltint",
+    "m_DefaultReferenceName": "_petaltint",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 0.0
+    },
+    "isMainColor": false,
+    "m_ColorMode": 0
+}
+
+{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicVectorMaterialSlot",
     "m_ObjectId": "75a696c8479247d3b8d3157c8cb1cc06",
@@ -1345,15 +1379,15 @@
     "m_Value": {
         "serializedVersion": "2",
         "key0": {
-            "r": 0.04091520980000496,
-            "g": 0.06301002949476242,
-            "b": 0.004024717025458813,
+            "r": 0.42420026659965517,
+            "g": 0.6196947693824768,
+            "b": 0.0032444815151393415,
             "a": 1.0
         },
         "key1": {
-            "r": 0.4617513120174408,
-            "g": 0.708984375,
-            "b": 0.03265294432640076,
+            "r": 2.722172260284424,
+            "g": 0.47032302618026736,
+            "b": 0.018657898530364038,
             "a": 1.0
         },
         "key2": {
@@ -1363,20 +1397,20 @@
             "a": 0.0
         },
         "key3": {
-            "r": 1.3610862493515015,
-            "g": 0.6649445295333862,
-            "b": 0.009328950196504593,
+            "r": 0.9969835877418518,
+            "g": 0.6420365571975708,
+            "b": 0.0,
             "a": 0.0
         },
         "key4": {
-            "r": 1.993967056274414,
-            "g": 0.8697292804718018,
+            "r": 0.9969835877418518,
+            "g": 0.6420365571975708,
             "b": 0.0,
             "a": 0.0
         },
         "key5": {
-            "r": 0.0,
-            "g": 0.0,
+            "r": 0.9969835877418518,
+            "g": 0.6420365571975708,
             "b": 0.0,
             "a": 0.0
         },
@@ -1392,12 +1426,12 @@
             "b": 0.0,
             "a": 0.0
         },
-        "ctime0": 31226,
-        "ctime1": 35948,
-        "ctime2": 39321,
-        "ctime3": 41923,
-        "ctime4": 61391,
-        "ctime5": 0,
+        "ctime0": 26118,
+        "ctime1": 43658,
+        "ctime2": 62933,
+        "ctime3": 62933,
+        "ctime4": 62933,
+        "ctime5": 62933,
         "ctime6": 0,
         "ctime7": 0,
         "atime0": 0,
@@ -1410,7 +1444,7 @@
         "atime7": 0,
         "m_Mode": 0,
         "m_ColorSpace": -1,
-        "m_NumColorKeys": 4,
+        "m_NumColorKeys": 3,
         "m_NumAlphaKeys": 2
     },
     "m_DefaultValue": {
@@ -1940,7 +1974,11 @@
     "m_Type": "UnityEditor.ShaderGraph.CategoryData",
     "m_ObjectId": "d4254e3d926d4c94a0287d3188183352",
     "m_Name": "",
-    "m_ChildObjectList": []
+    "m_ChildObjectList": [
+        {
+            "m_Id": "74038a30a7e34c6eace914a9ad46b139"
+        }
+    ]
 }
 
 {

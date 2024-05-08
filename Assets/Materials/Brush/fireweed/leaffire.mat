@@ -58,5 +58,5 @@ Material:
     - _QueueOffset: 0
     m_Colors:
     - _flowertint: {r: 0, g: 1, b: 0.19782925, a: 0}
-    - _leaftint: {r: 0, g: 0.9622642, b: 0.28318456, a: 0}
+    - _leaftint: {r: 0.009433985, g: 1, b: 0.101960786, a: 0}
   m_BuildTextureStacks: []
