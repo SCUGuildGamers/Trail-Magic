@@ -14,7 +14,7 @@ public class HoverObject : MonoBehaviour
         Unhover();
     }
     public void Hover() {
-        Debug.Log("Hovering!");
+        //Debug.Log("Hovering!");
         if(GetComponent<Outline>() != null){
             GetComponent<Outline>().enabled = true;
         }
@@ -22,7 +22,7 @@ public class HoverObject : MonoBehaviour
 
     public void Unhover()
     {
-        Debug.Log("Not hovering!");
+        //Debug.Log("Not hovering!");
         if(GetComponent<Outline>() != null){
             GetComponent<Outline>().enabled = false;
         }
@@ -30,7 +30,7 @@ public class HoverObject : MonoBehaviour
 
     //Sean's changes
     //select option to display text/change highlight color
-    public void Selected()
+    /*public void Selected()
     {
         Debug.Log("Selected");
         if (Input.GetMouseButtonDown(0))
@@ -41,7 +41,7 @@ public class HoverObject : MonoBehaviour
 
         }
 
-    }
+    }*/
     //public string returnName()
     //public string returnInfo()
     public string returnName()

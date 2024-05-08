@@ -8,6 +8,7 @@ public class OutlineLook : MonoBehaviour
 {
     [SerializeField] private GameObject hitObject;
     [SerializeField] private HoverObject currentHoverObject;
+    [SerializeField] private bool selected = false;
     //text script object (sean stuff)
     public GameObject uiCanvas;
     // tmp name public
@@ -19,9 +20,10 @@ public class OutlineLook : MonoBehaviour
     private void Start()
     {
         uiCanvas.SetActive(false);
+        selected = false;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         Ray rayOrigin = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitInfo;
@@ -35,6 +37,8 @@ public class OutlineLook : MonoBehaviour
                     if (hitObject.GetComponent<HoverObject>() != currentHoverObject){
                         if(currentHoverObject!=null){
                             currentHoverObject.Unhover();
+                            uiCanvas.SetActive(false);
+                            selected = false;
                         }
                         currentHoverObject = hitObject.GetComponent<HoverObject>();
                         currentHoverObject.Hover();
@@ -46,6 +50,7 @@ public class OutlineLook : MonoBehaviour
                         currentHoverObject.Unhover();
                         uiCanvas.SetActive(false);
                         currentHoverObject = null;
+                        selected = false;
                     }  
                 }
             }
@@ -55,6 +60,7 @@ public class OutlineLook : MonoBehaviour
                     currentHoverObject.Unhover();
                     uiCanvas.SetActive(false);
                     currentHoverObject = null;
+                    selected = false;
                 }
             }
         }
@@ -63,12 +69,14 @@ public class OutlineLook : MonoBehaviour
                     currentHoverObject.Unhover();
                     uiCanvas.SetActive(false);
                     currentHoverObject = null;
+                    selected = false;
                 }
         }
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("clicked");
             Selected();
+            
         }
     }
     //make a select function here
@@ -82,9 +90,11 @@ public class OutlineLook : MonoBehaviour
     {
         if (currentHoverObject != null)
         {
+
             Debug.Log("selecting");
             //enable canvas
-            uiCanvas.SetActive(!uiCanvas.active);
+            selected = !selected;
+            uiCanvas.SetActive(selected);
             //set the text in both tmp text to the strings that you can call from the hoverobject
             //fill canvas with info grabbed from hover object
             NameText.SetText(currentHoverObject.ObjectName);
