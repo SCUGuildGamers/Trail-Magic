@@ -13,6 +13,7 @@ public class LightingManager : MonoBehaviour
     [SerializeField] Light sun;
     [SerializeField] float lerpValue = 0; //must be 0-1
     [SerializeField] bool usingGrad = true;
+    [SerializeField] bool autoLerp = true;
     [SerializeField] float transitionDuration = 300f; // 5 minutes
     int currentTransitionIndex = 0; // Track current transition index
     float transitionStartTime; // Track the start of the current transition
@@ -49,7 +50,8 @@ public class LightingManager : MonoBehaviour
     {
         if (usingGrad)
         {
-            lerpValue = Mathf.Clamp01((Time.time - transitionStartTime) / transitionDuration);
+            if(autoLerp)
+                lerpValue = Mathf.Clamp01((Time.time - transitionStartTime) / transitionDuration);
 
             SetSkyColors();
             SetDirectionalLight();
@@ -97,7 +99,7 @@ public class LightingManager : MonoBehaviour
         {
             TransitionData currentTransition = transitions[currentTransitionIndex];
             sun.color = currentTransition.emissionColor.Evaluate(lerpValue);
-            sun.intensity = currentTransition.emissionIntensity.Evaluate(lerpValue).r * 5; //needs to be normalized
+            sun.intensity = currentTransition.emissionIntensity.Evaluate(lerpValue).r * 10; //needs to be normalized
             sun.transform.rotation = Quaternion.Euler(new Vector3(Mathf.Lerp(currentTransition.lightRotationX[0], currentTransition.lightRotationX[1], lerpValue), 90f, 0f));
         }
     }
@@ -110,6 +112,8 @@ public class LightingManager : MonoBehaviour
             Color varColor = currentTransition.fogColor.Evaluate(lerpValue);
             RenderSettings.fogColor = currentTransition.fogColor.Evaluate(lerpValue);
             RenderSettings.fogDensity = currentTransition.fogDensity.Evaluate(lerpValue).r * 5; //needs normalizing
+            RenderSettings.ambientIntensity = currentTransition.envLightingIntensityMult.Evaluate(lerpValue).r * 8;
+            Debug.Log("Ambient intensity: " + RenderSettings.ambientIntensity);
         }
     }
 
