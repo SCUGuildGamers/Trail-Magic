@@ -39,12 +39,12 @@ Material:
     m_Ints: []
     m_Floats:
     - _CloudScale: 177.3
-    - _CloudsAlpha: 33.1
-    - _CloudsPower: 0.55
+    - _CloudsAlpha: 116.2
+    - _CloudsPower: 1.3
     - _DistortScale: -21.7
     - _QueueControl: 0
     m_Colors:
     - _CloudSpeed: {r: 0.002, g: 0.002, b: 0, a: 0}
-    - _CloudsColor: {r: 0.34528297, g: 0.9680726, b: 1, a: 1}
+    - _CloudsColor: {r: 1.3584906, g: 1.9692689, b: 2, a: 1}
     - _DistortSpeed: {r: 0.01, g: 0.01, b: 0, a: 0}
   m_BuildTextureStacks: []

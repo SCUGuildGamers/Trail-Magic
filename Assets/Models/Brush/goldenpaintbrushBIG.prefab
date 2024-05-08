@@ -260,6 +260,8 @@ GameObject:
   - component: {fileID: 4167510365467458946}
   - component: {fileID: 2502144379027006328}
   - component: {fileID: 1515161195711779372}
+  - component: {fileID: -5457012799659763645}
+  - component: {fileID: -2223560427273532159}
   m_Layer: 0
   m_Name: goldenpaintbrushBIG
   m_TagString: Untagged
@@ -339,3 +341,38 @@ LODGroup:
     - renderer: {fileID: 327715606161970564}
     - renderer: {fileID: 933687777521549118}
   m_Enabled: 1
+--- !u!114 &-5457012799659763645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8277550071580665722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &-2223560427273532159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8277550071580665722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f90ca8eb3d8f94519ba2b67a3212598e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Objectinfo: "In 1997, the Golden Paintbrush was put onto the endangered species
+    list because of humanity\u2019s attempts to replace natural ecosystems with farmland
+    and housing. However, today, the flower is no longer on the list because of successful
+    preservation efforts. Our effort matters!"
+  ObjectName: Golden Paintbrush

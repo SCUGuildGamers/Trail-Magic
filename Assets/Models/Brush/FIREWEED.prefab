@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4601263525548888492}
   - component: {fileID: 7729644379338348410}
   - component: {fileID: 6823926374131154555}
+  - component: {fileID: 6843285683888671680}
+  - component: {fileID: -6367620194363872217}
   m_Layer: 0
   m_Name: FIREWEED
   m_TagString: Untagged
@@ -56,7 +58,6 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 1813061439984805421}
-    - renderer: {fileID: 0}
     - renderer: {fileID: 3302019898220843914}
     - renderer: {fileID: 8042946094880181491}
     - renderer: {fileID: 3946389432018006939}
@@ -65,7 +66,6 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 1813061439984805421}
-    - renderer: {fileID: 0}
     - renderer: {fileID: 3302019898220843914}
     - renderer: {fileID: 8042946094880181491}
     - renderer: {fileID: 3946389432018006939}
@@ -99,6 +99,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.09719086, y: 1.8452759, z: 0.12921143}
   m_Center: {x: -0.0007972717, y: 0.92684937, z: 0.006439209}
+--- !u!114 &6843285683888671680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140918961057456780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f90ca8eb3d8f94519ba2b67a3212598e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Objectinfo: 
+  ObjectName: Fireweed
+--- !u!114 &-6367620194363872217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140918961057456780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.8216131, g: 0.5312166, b: 0.9009434, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &4395088986608652757
 GameObject:
   m_ObjectHideFlags: 0
