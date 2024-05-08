@@ -28,7 +28,7 @@ public class HoverObject : MonoBehaviour
         }
     }
 
-    /*//Sean's changes
+    //Sean's changes
     //select option to display text/change highlight color
     public void Selected()
     {
@@ -41,7 +41,7 @@ public class HoverObject : MonoBehaviour
 
         }
 
-    }*/
+    }
     //public string returnName()
     //public string returnInfo()
     public string returnName()
