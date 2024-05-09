@@ -918,8 +918,8 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   tallTrunkColor:
     serializedVersion: 2
-    key0: {r: 0.24952886, g: 0, b: 0.6179246, a: 1}
-    key1: {r: 0.5019608, g: 0.30980393, b: 0.07450981, a: 1}
+    key0: {r: 0.72156864, g: 0.5137255, b: 0.6901961, a: 1}
+    key1: {r: 0.3254902, g: 0.25882354, b: 0.25490198, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -942,14 +942,14 @@ MonoBehaviour:
     atime5: 0
     atime6: 0
     atime7: 0
-    m_Mode: 0
+    m_Mode: 2
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   tallLeafColor:
     serializedVersion: 2
-    key0: {r: 0.4867382, g: 0, b: 1, a: 1}
-    key1: {r: 0.22352943, g: 0.9843138, b: 0.16862746, a: 1}
+    key0: {r: 0.44313726, g: 0.6117647, b: 0.6, a: 1}
+    key1: {r: 0.249644, g: 0.4009434, b: 0.25422883, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -972,14 +972,14 @@ MonoBehaviour:
     atime5: 0
     atime6: 0
     atime7: 0
-    m_Mode: 0
+    m_Mode: 2
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   shortTrunkColor:
     serializedVersion: 2
-    key0: {r: 0.2509804, g: 0, b: 0.61960787, a: 1}
-    key1: {r: 0.5058824, g: 0.3137255, b: 0.09019608, a: 1}
+    key0: {r: 0.72156864, g: 0.5137255, b: 0.6901961, a: 1}
+    key1: {r: 0.3254902, g: 0.25882354, b: 0.25490198, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -1002,14 +1002,14 @@ MonoBehaviour:
     atime5: 0
     atime6: 0
     atime7: 0
-    m_Mode: 0
+    m_Mode: 2
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   shortLeafColor:
     serializedVersion: 2
-    key0: {r: 0.48627454, g: 0, b: 1, a: 1}
-    key1: {r: 0.22352943, g: 0.9843138, b: 0.16862746, a: 1}
+    key0: {r: 0.44313726, g: 0.6117647, b: 0.6, a: 1}
+    key1: {r: 0.2509804, g: 0.4, b: 0.25490198, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -1032,7 +1032,7 @@ MonoBehaviour:
     atime5: 0
     atime6: 0
     atime7: 0
-    m_Mode: 0
+    m_Mode: 2
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2

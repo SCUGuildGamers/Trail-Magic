@@ -207,8 +207,8 @@ public class LightingManager : MonoBehaviour
 
             //short trees
             shortTrunkMat.color = currentTransition.shortTrunkColor.Evaluate(lerpValue);
-            shortBranchMat.SetColor("_branchtint", currentTransition.shortTrunkColor.Evaluate(lerpValue));
-            shortBranchMat.SetColor("_leafTint", currentTransition.shortLeafColor.Evaluate(lerpValue));
+            shortBranchMat.SetColor("_BranchTint", currentTransition.shortTrunkColor.Evaluate(lerpValue));
+            shortBranchMat.SetColor("_LeavesTint", currentTransition.shortLeafColor.Evaluate(lerpValue));
         }
     }
 }
