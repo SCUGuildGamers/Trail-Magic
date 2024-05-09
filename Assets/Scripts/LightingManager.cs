@@ -43,6 +43,17 @@ public class LightingManager : MonoBehaviour
     {
         skyboxMat = RenderSettings.skybox;
         transitionStartTime = Time.time;
+        for(int i = 0; i < transitions.Length; i++)
+        {
+            if (i != currentTransitionIndex)
+            {
+                profiles[i].weight = 0;
+            }
+            else
+            {
+                profiles[i].weight = 0;
+            }
+        }
     }
 
     // Update is called once per frame
