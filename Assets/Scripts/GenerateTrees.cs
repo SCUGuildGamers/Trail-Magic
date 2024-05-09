@@ -39,7 +39,7 @@ public class GenerateTrees : MonoBehaviour
 
             //GameObject tc = new GameObject("TC" + string.Format("{0:00000}", index));
             GameObject nt = Instantiate(tps[ti.prototypeIndex].prefab, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
-            nt.name = "NT" + string.Format("{0:00000}", index);
+            nt.name = tps[ti.prototypeIndex].prefab.name + string.Format("{0:00000}", index);
             nt.transform.parent = treeColliders.transform;
             nt.transform.position = TerrainExtras.WorldCoordinates(terrain, ti.position);
             nt.transform.localScale *= 2f;

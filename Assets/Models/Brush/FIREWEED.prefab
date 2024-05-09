@@ -111,7 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f90ca8eb3d8f94519ba2b67a3212598e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Objectinfo: fjdjgjkgawege
+  Objectinfo: Fireweed is a wildflower that earns its name from being able to rapidly
+    colonize areas burnt by fire.  It was one of the first plants to appear after
+    the eruption of Mt. St. Helens in 1980.
   ObjectName: Fireweed
   prefab: {fileID: 2140918961057456780}
 --- !u!114 &-6367620194363872217
@@ -126,9 +128,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 0.8216131, g: 0.5312166, b: 0.9009434, a: 1}
-  outlineWidth: 2
+  outlineMode: 3
+  outlineColor: {r: 0.3551086, g: 0.71661645, b: 0.990566, a: 1}
+  outlineWidth: 10
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []

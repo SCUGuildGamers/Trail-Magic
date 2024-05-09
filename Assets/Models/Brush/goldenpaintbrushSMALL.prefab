@@ -270,9 +270,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f90ca8eb3d8f94519ba2b67a3212598e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Objectinfo: 
+  Objectinfo: "In 1997, the Golden Paintbrush was put onto the endangered species
+    list because of humanity\u2019s attempts to replace natural ecosystems with farmland
+    and housing. However, today, the flower is no longer on the list because of successful
+    preservation efforts. Our effort matters!"
   ObjectName: Golden Paintbrush
-  prefab: {fileID: 0}
+  prefab: {fileID: 1647087178775416485}
 --- !u!114 &985344602639714815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,9 +288,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
+  outlineMode: 3
+  outlineColor: {r: 0.3551086, g: 0.71661645, b: 0.990566, a: 1}
+  outlineWidth: 10
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
