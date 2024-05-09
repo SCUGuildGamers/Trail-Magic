@@ -19,7 +19,7 @@ public class musicManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(timer);
+        //Debug.Log(timer);
         timer -= Time.deltaTime;
 
         if (timer <= 0f)
