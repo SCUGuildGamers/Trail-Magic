@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PolaroidCamera
   - PolaroidArea
+  - hoverable
   layers:
   - Default
   - TransparentFX
