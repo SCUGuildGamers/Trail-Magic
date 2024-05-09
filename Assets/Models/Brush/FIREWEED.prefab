@@ -111,9 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f90ca8eb3d8f94519ba2b67a3212598e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Objectinfo: 
+  Objectinfo: fjdjgjkgawege
   ObjectName: Fireweed
-  prefab: {fileID: 0}
+  prefab: {fileID: 2140918961057456780}
 --- !u!114 &-6367620194363872217
 MonoBehaviour:
   m_ObjectHideFlags: 0

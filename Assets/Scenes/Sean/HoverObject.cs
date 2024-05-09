@@ -10,9 +10,13 @@ public class HoverObject : MonoBehaviour
     public string ObjectName;
         
     public GameObject prefab;
+
+    private void OnAwake()
+    {
+        prefab.SetActive(false);
+    }
     void Start() { 
         Unhover();
-        prefab.SetActive(true);//ensures that objects are separate from terrain collider 
     }
     public void Hover() {
         //Debug.Log("Hovering!");
