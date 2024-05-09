@@ -113,7 +113,7 @@ public class LightingManager : MonoBehaviour
             RenderSettings.fogColor = currentTransition.fogColor.Evaluate(lerpValue);
             RenderSettings.fogDensity = currentTransition.fogDensity.Evaluate(lerpValue).r * 5; //needs normalizing
             RenderSettings.ambientIntensity = currentTransition.envLightingIntensityMult.Evaluate(lerpValue).r * 8;
-            Debug.Log("Ambient intensity: " + RenderSettings.ambientIntensity);
+            // Debug.Log("Ambient intensity: " + RenderSettings.ambientIntensity);
         }
     }
 
