@@ -224,7 +224,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   envLightingIntensityMult:
     serializedVersion: 2
-    key0: {r: 0.13725491, g: 0.13725491, b: 0.13725491, a: 1}
+    key0: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
     key1: {r: 0.08627451, g: 0.08627451, b: 0.08627451, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
@@ -284,7 +284,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   emissionIntensity:
     serializedVersion: 2
-    key0: {r: 0.13725491, g: 0.13725491, b: 0.13725491, a: 1}
+    key0: {r: 0.11764706, g: 0.11764706, b: 0.11764706, a: 1}
     key1: {r: 0.08627451, g: 0.08627451, b: 0.08627451, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
