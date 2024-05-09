@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -6367620194363872217}
   m_Layer: 0
   m_Name: FIREWEED
-  m_TagString: Untagged
+  m_TagString: hoverable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,6 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Objectinfo: 
   ObjectName: Fireweed
+  prefab: {fileID: 0}
 --- !u!114 &-6367620194363872217
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 985344602639714815}
   m_Layer: 0
   m_Name: goldenpaintbrushSMALL
-  m_TagString: Untagged
+  m_TagString: hoverable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -272,6 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Objectinfo: 
   ObjectName: Golden Paintbrush
+  prefab: {fileID: 0}
 --- !u!114 &985344602639714815
 MonoBehaviour:
   m_ObjectHideFlags: 0

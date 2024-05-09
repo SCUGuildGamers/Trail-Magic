@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: -2223560427273532159}
   m_Layer: 0
   m_Name: goldenpaintbrushBIG
-  m_TagString: Untagged
+  m_TagString: hoverable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -376,3 +376,4 @@ MonoBehaviour:
     and housing. However, today, the flower is no longer on the list because of successful
     preservation efforts. Our effort matters!"
   ObjectName: Golden Paintbrush
+  prefab: {fileID: 0}
