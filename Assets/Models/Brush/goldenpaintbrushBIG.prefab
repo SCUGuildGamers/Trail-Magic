@@ -376,4 +376,8 @@ MonoBehaviour:
     and housing. However, today, the flower is no longer on the list because of successful
     preservation efforts. Our effort matters!"
   ObjectName: Golden Paintbrush
+  isVolcano: 0
+  isFlower: 1
+  smoke: []
+  smokeGradients: []
   prefab: {fileID: 8277550071580665722}

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class HoverObject : MonoBehaviour
 {
@@ -8,28 +9,58 @@ public class HoverObject : MonoBehaviour
     //info
     public string Objectinfo;
     public string ObjectName;
+
+    [SerializeField] bool isVolcano = false;
+    [SerializeField] bool isFlower = false;
+    [SerializeField] List<VisualEffect> smoke;
+    [SerializeField] List<Gradient> smokeGradients;
         
     public GameObject prefab;
 
     private void OnAwake()
     {
-        prefab.SetActive(false);
+        if (isFlower)
+        {
+            prefab.SetActive(false);
+        }
     }
-    void Start() { 
+    void Start() {
         Unhover();
     }
     public void Hover() {
         //Debug.Log("Hovering!");
-        if(GetComponent<Outline>() != null){
-            GetComponent<Outline>().enabled = true;
+        if (isVolcano)
+        {
+            for (int i = 0; i < smoke.Count; i++)
+            {
+                smoke[i].SetGradient("GradientColor", smokeGradients[1]);//hovering colored gradient
+            }
+        }
+        else
+        {
+            if (GetComponent<Outline>() != null)
+            {
+                GetComponent<Outline>().enabled = true;
+            }
         }
     }
 
     public void Unhover()
     {
-        //Debug.Log("Not hovering!");
-        if(GetComponent<Outline>() != null){
-            GetComponent<Outline>().enabled = false;
+        if (isVolcano)
+        {
+            for (int i = 0; i < smoke.Count; i++)
+            {
+                smoke[i].SetGradient("GradientColor", smokeGradients[0]);//default color
+            }
+        }
+        else
+        {
+            //Debug.Log("Not hovering!");
+            if (GetComponent<Outline>() != null)
+            {
+                GetComponent<Outline>().enabled = false;
+            }
         }
     }
 

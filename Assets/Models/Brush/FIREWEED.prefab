@@ -115,6 +115,10 @@ MonoBehaviour:
     colonize areas burnt by fire.  It was one of the first plants to appear after
     the eruption of Mt. St. Helens in 1980.
   ObjectName: Fireweed
+  isVolcano: 0
+  isFlower: 1
+  smoke: []
+  smokeGradients: []
   prefab: {fileID: 2140918961057456780}
 --- !u!114 &-6367620194363872217
 MonoBehaviour:
