@@ -11,10 +11,15 @@ public class FogController : MonoBehaviour
     private float maxDistance = 50.0f;
     [SerializeField]
     private float minFogDensity = 0.0006f;
-    [SerializeField]
-    private float maxFogDensity = 1f;
+    [SerializeField] private float maxFogDensity = 1f;
     public float activationDistance = 500f;
+    [SerializeField] GameObject clouds;
 
+    private void Start()
+    {
+        clouds.SetActive(false);
+        cloudMaterial.SetFloat("_CloudsAlpha", 0);
+    }
     void Update()
     {
         if (fogPoint == null) {return;}
@@ -27,8 +32,11 @@ public class FogController : MonoBehaviour
         if (distance <= activationDistance)
         {
             if (!overheadFog.isPlaying)
+            {
                 overheadFog.Play();
                 overheadFog.gameObject.SetActive(true);
+            }
+            clouds.SetActive(true);
         }
         else if (distance > activationDistance)
         {
@@ -37,11 +45,13 @@ public class FogController : MonoBehaviour
                     overheadFog.Stop();
                     overheadFog.gameObject.SetActive(false);
                 }
+
         }
         distance = Mathf.Min(distance, maxDistance);
-        if (distance >= 500)
+        if (distance >= activationDistance)
         {
             cloudMaterial.SetFloat("_CloudsAlpha", 0f);
+            clouds.SetActive(false);
 
         }
         if(distance>450 && distance < 500)

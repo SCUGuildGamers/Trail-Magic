@@ -66,7 +66,7 @@ public class LightingManager : MonoBehaviour
 
             SetSkyColors();
             SetDirectionalLight();
-            SetFog();
+            //SetFog();
             //SetGlobalVolume();
             WeighVolumes();
             SetTrees();

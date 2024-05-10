@@ -2,9 +2,9 @@ Shader "Custom/Polaroid"
 {
     Properties
     {
-        _MainTex ("Albedo (RGB)", 2D) = "white" {}
+        _MainTex ("Texture", 2D) = "white" {}
     }
-    SubShader
+        SubShader
     {
         Tags { "Queue" = "Transparent" "IgnoreProjector" = "True" "RenderType"="Transparent" }
         Lighting Off
@@ -17,7 +17,6 @@ Shader "Custom/Polaroid"
         Pass
         {
             CGPROGRAM
-
             #pragma vertex vert
             #pragma fragment frag
 
@@ -26,7 +25,7 @@ Shader "Custom/Polaroid"
             struct appdata 
             {
                 float4 vertex : POSITION;
-                float2 uv : TEXTCOORD0;
+                float2 uv : TEXCOORD0;
             };
 
             struct v2f

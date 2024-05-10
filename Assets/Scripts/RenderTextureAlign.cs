@@ -12,7 +12,7 @@ public class RenderTextureAlignScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        thisCam = GetComponent<Camera>();
+        //thisCam = GetComponent<Camera>();
         mainCam = Camera.main;
         if (thisCam.targetTexture != null) {
             thisCam.targetTexture.Release();
