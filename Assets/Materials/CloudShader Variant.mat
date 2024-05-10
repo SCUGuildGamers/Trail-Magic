@@ -39,9 +39,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _CloudScale: 12.2
-    - _CloudsAlpha: 182.3
-    - _CloudsPower: 2.9
-    - _DistortScale: 105.8
+    - _CloudsAlpha: 0.9988428
+    - _CloudsPower: 0
+    - _DistortScale: 105.82
     - _QueueControl: 0
     m_Colors:
     - _CloudSpeed: {r: 0.002, g: 0.002, b: 0, a: 0}
