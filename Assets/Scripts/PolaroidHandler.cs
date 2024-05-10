@@ -15,6 +15,9 @@ public class PolaroidHandler : MonoBehaviour
     
     void Start() {
         polaroidState = false;
+        eightiesPolaroid.SetActive(false);
+        ninetiesPolaroid.SetActive(false);
+        bwPolaroid.SetActive(false);
         uiElement = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity);
         PolaroidStateHandler();
     }
@@ -28,20 +31,20 @@ public class PolaroidHandler : MonoBehaviour
             Debug.Log("Entering!");
             polaroidState = true; 
             string era = collider.gameObject.GetComponent<PolaroidArea>().getTimeframe();
-            if(era == "bw") {
+            if(era == "80s") {
                 eightiesPolaroid.SetActive(true);
             }
-            else if (era == "80s") {
+            else if (era == "90s") {
                 ninetiesPolaroid.SetActive(true);
             }
-            else if (era == "90s") {
+            else if (era == "bw") {
                 bwPolaroid.SetActive(true);
             }  
-            else {
+            /*else {
                 eightiesPolaroid.SetActive(false);
                 ninetiesPolaroid.SetActive(false);
                 bwPolaroid.SetActive(false);
-            }
+            }*/
         }
     }
 
@@ -49,6 +52,9 @@ public class PolaroidHandler : MonoBehaviour
         if(collider.gameObject.tag == polaroidTag) {
             Debug.Log("Exiting!");
             polaroidState = false;
+            eightiesPolaroid.SetActive(false);
+            ninetiesPolaroid.SetActive(false);
+            bwPolaroid.SetActive(false);
         }
     }
 

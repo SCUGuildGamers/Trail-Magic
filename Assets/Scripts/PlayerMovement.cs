@@ -20,8 +20,8 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        footsteps = transform.Find("ControlledSFX/FootstepsSFX").GetComponent<AudioSource>();
-        if (!footsteps){Debug.Log("Footsteps SFX not found");}
+        //footsteps = transform.Find("ControlledSFX/FootstepsSFX").GetComponent<AudioSource>();
+        //if (!footsteps){Debug.Log("Footsteps SFX not found");}
     }
 
     // Update is called once per frame
