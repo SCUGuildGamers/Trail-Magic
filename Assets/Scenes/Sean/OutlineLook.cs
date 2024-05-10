@@ -31,6 +31,7 @@ public class OutlineLook : MonoBehaviour
         if (Physics.Raycast(rayOrigin, out hitInfo)) {
             //Debug.Log(rayOrigin);
             if (hitInfo.collider != null) {
+                Debug.Log("hit " + hitInfo.collider.gameObject.name);
                 hitObject = hitInfo.collider.gameObject;
                 if (hitObject.GetComponent<HoverObject>() != null)
                 {

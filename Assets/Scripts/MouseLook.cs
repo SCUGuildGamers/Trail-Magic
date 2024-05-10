@@ -21,9 +21,9 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!locked)
-        {
-            Cursor.lockState = CursorLockMode.Locked; // Locks the cursor to the center of the screen
+        //if (!locked)
+        //{
+            //Cursor.lockState = CursorLockMode.Locked; // Locks the cursor to the center of the screen
 
             float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime; // mouseX is the horizontal movement of the mouse
             float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime; // mouseY is the vertical movement of the mouse
@@ -33,11 +33,11 @@ public class MouseLook : MonoBehaviour
 
             transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f); // Rotates the camera up and down
             playerBody.Rotate(Vector3.up * mouseX); // Rotates the player left and right
-        }
+        /*}
         else
         {
             Cursor.lockState = CursorLockMode.None;
-        }
+        }*/
     }
 
     public bool Locked
