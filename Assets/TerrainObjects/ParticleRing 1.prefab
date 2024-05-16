@@ -4843,9 +4843,10 @@ GameObject:
   - component: {fileID: 4616204438893687599}
   - component: {fileID: 876610554114498878}
   - component: {fileID: 5503915595728882490}
+  - component: {fileID: 2146625603359474554}
   m_Layer: 0
   m_Name: BeaconEffect
-  m_TagString: Untagged
+  m_TagString: PolaroidArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4935,6 +4936,19 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5000001
-  m_Height: 2
+  m_Height: 0.31
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0.000000059604645, y: -0.97, z: -0.00000008940697}
+--- !u!114 &2146625603359474554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7550116405019416073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaee1baabba8a45c8998118c387246c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeframe: 
