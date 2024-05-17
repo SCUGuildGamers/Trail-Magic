@@ -118,7 +118,7 @@ Material:
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _SkyGradientExponent: 2.9390006
+    - _SkyGradientExponent: 2.0062506
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -136,8 +136,8 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HorizonLineColor: {r: 0.9044118, g: 0.8872592, b: 0.7913603, a: 1}
-    - _SkyGradientBottom: {r: 0.11737752, g: 0.16214374, b: 0.45132023, a: 1}
-    - _SkyGradientTop: {r: 0.21989727, g: 0.12961292, b: 0.27453437, a: 1}
+    - _SkyGradientBottom: {r: 0.9938538, g: 0.42058235, b: 0.4904414, a: 1}
+    - _SkyGradientTop: {r: 0.8392157, g: 0.7294118, b: 0.6784314, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _SunDiscColor: {r: 1, g: 1, b: 1, a: 1}
     - _SunHaloColor: {r: 1, g: 0.9924986, b: 0.8160377, a: 1}
