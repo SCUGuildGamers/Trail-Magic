@@ -138,6 +138,6 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _branchtint: {r: 0.17779012, g: 0.11112344, b: 0.072220266, a: 1}
+    - _branchtint: {r: 0.18256307, g: 0.11589639, b: 0.07812366, a: 1}
     - _leaftint: {r: 0.71665585, g: 1, b: 0.509434, a: 0}
   m_BuildTextureStacks: []
