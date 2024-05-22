@@ -12,7 +12,7 @@ public class OptionsMenu : MonoBehaviour
     {
         if(!PlayerPrefs.HasKey("fullScreenValue"))
         {
-            PlayerPrefs.SetInt("fullScreenValue", 0);
+            PlayerPrefs.SetInt("fullScreenValue", 1);
             Load();
         }
         else
