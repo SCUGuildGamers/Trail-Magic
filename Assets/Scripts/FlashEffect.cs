@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class FlashEffect : MonoBehaviour
 {
     [SerializeField] private Image flashImage;
+    [SerializeField] private Image blackImage;
     public float flashHoldDuration = 0.1f; // white flash hold duration
     public float flashFadeDuration = 0.2f; // white flash duration
     public float fadeToBlackDuration = 1.0f; //fade to black duration
@@ -16,6 +17,8 @@ public class FlashEffect : MonoBehaviour
     {
         flashImage.gameObject.SetActive(false); // disable the image
         flashImage.color = new Color(1, 1, 1, 0); // set the initial color to transparent white
+        flashImage.gameObject.SetActive(false); // disable the image
+        blackImage.color = new Color(0, 0, 0, 1); // set the initial color to black
     }
 
     public void PlayButtonPressed()
@@ -28,6 +31,7 @@ public class FlashEffect : MonoBehaviour
         flashImage.gameObject.SetActive(true); //enable the image
 
         flashImage.color = new Color(1, 1, 1, 1); // flash white instantly
+        blackImage.gameObject.SetActive(true); // enable the black image
         yield return new WaitForSeconds(flashHoldDuration); // hold the white flash
         
         // //flash white
@@ -54,19 +58,19 @@ public class FlashEffect : MonoBehaviour
 
         flashImage.color = new Color(1, 1, 1, 0); //set the color to transparent white
 
-        yield return new WaitForSeconds(0.1f); // short pause before fading to black
+        // yield return new WaitForSeconds(0.1f); // short pause before fading to black
 
-        // fade to black
-        float elapsedTime = 0f;
-        while (elapsedTime < fadeToBlackDuration)
-        {
-            elapsedTime += Time.deltaTime;
-            float alpha = Mathf.Lerp(0f, 1f, elapsedTime / fadeToBlackDuration);
-            flashImage.color = new Color(0, 0, 0, alpha);
-            yield return null;
-        }
+        // // fade to black
+        // float elapsedTime = 0f;
+        // while (elapsedTime < fadeToBlackDuration)
+        // {
+        //     elapsedTime += Time.deltaTime;
+        //     float alpha = Mathf.Lerp(0f, 1f, elapsedTime / fadeToBlackDuration);
+        //     flashImage.color = new Color(0, 0, 0, alpha);
+        //     yield return null;
+        // }
 
-        flashImage.color = new Color(0, 0, 0, 1); //set the color to black
+        // flashImage.color = new Color(0, 0, 0, 1); //set the color to black
 
         //load the scene
         SceneManager.LoadScene(1);
