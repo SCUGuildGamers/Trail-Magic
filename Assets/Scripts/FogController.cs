@@ -22,12 +22,13 @@ public class FogController : MonoBehaviour
     }
     void Update()
     {
+        if(RenderSettings.fogDensity > maxFogDensity){RenderSettings.fogDensity = maxFogDensity;}
+
         if (fogPoint == null) {return;}
 
         float distance = Vector3.Distance(transform.position, fogPoint.position);
+        Debug.Log(RenderSettings.fogDensity);
         //Debug.Log("Current Distance: " + distance);
-
-        //Debug.Log(RenderSettings.fogDensity);
         //Debug.Log(distance);
         if (distance <= activationDistance)
         {
