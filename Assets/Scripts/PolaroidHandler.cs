@@ -8,17 +8,16 @@ public class PolaroidHandler : MonoBehaviour
     [SerializeField] GameObject eightiesPolaroid;
     [SerializeField] GameObject ninetiesPolaroid;
     [SerializeField] GameObject bwPolaroid;
-
-    [SerializeField] private GameObject floatingTextPrefab;
-    private GameObject uiElement;
+    [SerializeField] private GameObject explanation;
     private bool polaroidState;
+    private bool polaroidOn;
     
     void Start() {
         polaroidState = false;
+        polaroidOn = false;
         eightiesPolaroid.SetActive(false);
         ninetiesPolaroid.SetActive(false);
         bwPolaroid.SetActive(false);
-        uiElement = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity);
         PolaroidStateHandler();
     }
     
@@ -40,11 +39,6 @@ public class PolaroidHandler : MonoBehaviour
             else if (era == "bw") {
                 bwPolaroid.SetActive(true);
             }  
-            /*else {
-                eightiesPolaroid.SetActive(false);
-                ninetiesPolaroid.SetActive(false);
-                bwPolaroid.SetActive(false);
-            }*/
         }
     }
 
@@ -60,16 +54,21 @@ public class PolaroidHandler : MonoBehaviour
 
     void PolaroidStateHandler () {
         if (polaroidState == true) {
-            uiElement.SetActive(true);
+            if(!polaroidOn) {
+                explanation.SetActive(true);
+            } else {
+                explanation.SetActive(false);
+            }
+            explanation.SetActive(true);
             if (Input.GetKey("space")) {
-                Debug.Log("Space was pressed");
-                polaroidCam.SetActive(true); 
-                uiElement.SetActive(false);
+                polaroidOn = true;
+                polaroidCam.SetActive(true);
             }
         }
         else {
+            polaroidOn = false;
             polaroidCam.SetActive(false);
-            uiElement.SetActive(false);
+            explanation.SetActive(false);
         }    
     }
 }
