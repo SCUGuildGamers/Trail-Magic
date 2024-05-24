@@ -27,11 +27,11 @@ public class OutlineLook : MonoBehaviour
     {
         Ray rayOrigin = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitInfo;
+        float maxDistance = Mathf.Infinity;
 
-        if (Physics.Raycast(rayOrigin, out hitInfo)) {
-            //Debug.Log(rayOrigin);
+        if (Physics.Raycast(rayOrigin, out hitInfo, maxDistance)) {
             if (hitInfo.collider != null) {
-                Debug.Log("hit " + hitInfo.collider.gameObject.name);
+                //Debug.Log("hit " + hitInfo.collider.gameObject.name);
                 hitObject = hitInfo.collider.gameObject;
                 if (hitObject.GetComponent<HoverObject>() != null)
                 {
