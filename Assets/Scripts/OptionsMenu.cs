@@ -23,14 +23,14 @@ public class OptionsMenu : MonoBehaviour
 
     private void Load()
     {
-        fullscreenToggle.isOn = (PlayerPrefs.GetInt("fullscreenValue") > 0);
+        fullscreenToggle.isOn = PlayerPrefs.GetInt("fullscreenValue") > 0;
         Screen.fullScreen = fullscreenToggle.isOn;
     }
 
     public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
-        int fullScreen = Screen.fullScreen ? 1 : 0;
+        int fullScreen = Screen.fullScreen ? 0 : 1;
         PlayerPrefs.SetInt("fullscreenValue", fullScreen);
     }
 }
