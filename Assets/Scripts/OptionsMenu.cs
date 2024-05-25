@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class OptionsMenu : MonoBehaviour
 {
-    [SerializeField] Toggle fullscreenToggle;
+    [SerializeField] FullscreenToggle fullscreenToggle;
     
     // Start is called before the first frame update
     void Start()
