@@ -9,6 +9,9 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
+        // Move the player to the starting position
+        // This can only be implemented once MainMenu is in the same scene
+        
         // Load the scene
         SceneManager.LoadScene(playerData.checkpoint);
     }

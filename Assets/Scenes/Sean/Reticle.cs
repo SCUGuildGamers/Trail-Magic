@@ -6,9 +6,11 @@ public class Reticle : MonoBehaviour
 {
     MouseLook mouseLook;
 
-    bool visible = false;
+    // bool visible = false;
+    bool locked = true; // cursor locked to reticle
     
-    private void Start() {
+    private void Start() 
+    {
         Cursor.visible = false;
 
         mouseLook = FindAnyObjectByType<MouseLook>();
@@ -16,12 +18,28 @@ public class Reticle : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            visible = !visible;
-            Cursor.visible = false; // cursor never visible
-            mouseLook.Locked = visible;
-        }
+        // if (Input.GetKeyDown(KeyCode.Space)) 
+        // {
+        //     visible = !visible;
+        //     mouseLook.Locked = visible;
+        // }
 
-        transform.position = Input.mousePosition;
+        if (locked) 
+        {
+            Cursor.visible = false; // cursor never visible
+            mouseLook.Locked = false;
+            //transform.position = Input.mousePosition;
+        }
+        else 
+        {
+            Cursor.visible = true; // cursor always visible
+            mouseLook.Locked = true;
+        }
+    }
+
+    public bool Locked
+    {
+        get { return locked; }
+        set { locked = value; }
     }
 }
