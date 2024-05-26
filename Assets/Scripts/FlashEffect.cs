@@ -21,15 +21,14 @@ public class FlashEffect : MonoBehaviour
         blackImage.color = new Color(0, 0, 0, 1); // set the initial color to black
     }
 
-    public void PlayButtonPressed()
+    public void PlayButtonPressed(int sceneIndex)
     {
-        StartCoroutine(FlashAndLoadScene());
+        StartCoroutine(FlashAndLoadScene(sceneIndex));
     }
 
-    private IEnumerator FlashAndLoadScene()
+    private IEnumerator FlashAndLoadScene(int sceneIndex)
     {
         flashImage.gameObject.SetActive(true); //enable the image
-
         flashImage.color = new Color(1, 1, 1, 1); // flash white instantly
         blackImage.gameObject.SetActive(true); // enable the black image
         yield return new WaitForSeconds(flashHoldDuration); // hold the white flash
@@ -73,6 +72,6 @@ public class FlashEffect : MonoBehaviour
         // flashImage.color = new Color(0, 0, 0, 1); //set the color to black
 
         //load the scene
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(sceneIndex);
     }
 }

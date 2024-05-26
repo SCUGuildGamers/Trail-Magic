@@ -13,7 +13,8 @@ public class MainMenu : MonoBehaviour
         // This can only be implemented once MainMenu is in the same scene
         
         // Load the scene
-        SceneManager.LoadScene(playerData.checkpoint);
+        FindObjectOfType<FlashEffect>().PlayButtonPressed(playerData.checkpoint);
+        // SceneManager.LoadScene(playerData.checkpoint);
     }
 
     public void QuitGame()

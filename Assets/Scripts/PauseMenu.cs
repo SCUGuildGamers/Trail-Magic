@@ -46,7 +46,8 @@ public class PauseMenu : MonoBehaviour
     
     public void QuitToMainMenu()
     {
-        // Load the scene
+        // Load the 
+        Time.timeScale = 1f;
         SceneManager.LoadScene(playerData.checkpoint);
     }
 
