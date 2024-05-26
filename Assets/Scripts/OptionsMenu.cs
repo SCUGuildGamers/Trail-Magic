@@ -10,9 +10,10 @@ public class OptionsMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(!PlayerPrefs.HasKey("fullScreenValue"))
+        if(!PlayerPrefs.HasKey("fullscreenValue"))
         {
-            PlayerPrefs.SetInt("fullScreenValue", 1);
+            PlayerPrefs.SetInt("fullscreenValue", 1);
+            PlayerPrefs.Save();
             Load();
         }
         else
@@ -32,5 +33,6 @@ public class OptionsMenu : MonoBehaviour
         Screen.fullScreen = isFullscreen;
         int fullScreen = Screen.fullScreen ? 0 : 1;
         PlayerPrefs.SetInt("fullscreenValue", fullScreen);
+        PlayerPrefs.Save();
     }
 }
