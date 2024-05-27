@@ -12,7 +12,8 @@ public class PolaroidHandler : MonoBehaviour
     private bool polaroidState;
     private bool polaroidOn;
     
-    void Start() {
+    void Start() 
+    {
         polaroidState = false;
         polaroidOn = false;
         eightiesPolaroid.SetActive(false);
@@ -21,29 +22,37 @@ public class PolaroidHandler : MonoBehaviour
         PolaroidStateHandler();
     }
     
-    void Update() {
+    void Update() 
+    {
         PolaroidStateHandler();
     }
 
-    void OnTriggerEnter(Collider collider) {
-        if(collider.gameObject.tag == polaroidTag) {
+    void OnTriggerEnter(Collider collider) 
+    {
+        if(collider.gameObject.CompareTag(polaroidTag)) 
+        {
             Debug.Log("Entering!");
             polaroidState = true; 
             string era = collider.gameObject.GetComponent<PolaroidArea>().getTimeframe();
-            if(era == "80s") {
+            if(era == "80s") 
+            {
                 eightiesPolaroid.SetActive(true);
             }
-            else if (era == "90s") {
+            else if (era == "90s") 
+            {
                 ninetiesPolaroid.SetActive(true);
             }
-            else if (era == "bw") {
+            else if (era == "bw") 
+            {
                 bwPolaroid.SetActive(true);
             }  
         }
     }
 
-    void OnTriggerExit(Collider collider) {
-        if(collider.gameObject.tag == polaroidTag) {
+    void OnTriggerExit(Collider collider) 
+    {
+        if(collider.gameObject.tag == polaroidTag) 
+        {
             Debug.Log("Exiting!");
             polaroidState = false;
             eightiesPolaroid.SetActive(false);
@@ -52,20 +61,26 @@ public class PolaroidHandler : MonoBehaviour
         }
     }
 
-    void PolaroidStateHandler () {
-        if (polaroidState == true) {
-            if(!polaroidOn) {
+    void PolaroidStateHandler () 
+    {
+        if (polaroidState == true) 
+        {
+            if(!polaroidOn) 
+            {
                 explanation.SetActive(true);
-            } else {
+            } else 
+            {
                 explanation.SetActive(false);
             }
-            explanation.SetActive(true);
-            if (Input.GetKey("space")) {
+            
+            if (Input.GetKey("space")) 
+            {
                 polaroidOn = true;
                 polaroidCam.SetActive(true);
             }
         }
-        else {
+        else 
+        {
             polaroidOn = false;
             polaroidCam.SetActive(false);
             explanation.SetActive(false);
