@@ -1,25 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ViewpointCounter : MonoBehaviour
 {
-    [SerializeField] private List<Viewpoint> viewpoints;
+    [SerializeField] private List<GameObject> viewpoints;
     private Dictionary<string, bool> viewpointStatus;
     int visitedViewpoints;
     int totalViewpoints;
+    [SerializeField] private TextMeshProUGUI viewpointCounterText;
     
     // Start is called before the first frame update
     void Start()
     {
         viewpointStatus = new Dictionary<string, bool>();
         visitedViewpoints = 0;
-        foreach(Viewpoint viewpoint in viewpoints)
+        foreach(GameObject viewpoint in viewpoints)
         {
-            viewpointStatus.Add(viewpoint.viewpointName, false);
+            viewpointStatus.Add(viewpoint.name, false);
         }
 
         totalViewpoints = viewpoints.Count;
+
+        CountVisitedViewpoints();
     }
 
     // Update is called once per frame
@@ -38,11 +43,26 @@ public class ViewpointCounter : MonoBehaviour
         get { return totalViewpoints; }
     }
 
+    void CountVisitedViewpoints()
+    {
+        visitedViewpoints = 0;
+        foreach(KeyValuePair<string, bool> viewpoint in viewpointStatus)
+        {
+            if(viewpoint.Value)
+            {
+                visitedViewpoints++;
+            }
+        }
+
+        viewpointCounterText.text = "Viewpoints: " + visitedViewpoints + "/" + totalViewpoints;
+    }
+
     void VisitViewpoint(string viewpointName)
     {
         if (viewpointStatus.ContainsKey(viewpointName))
         {
             viewpointStatus[viewpointName] = true;
+            CountVisitedViewpoints();
         }
         else
         {
@@ -54,7 +74,9 @@ public class ViewpointCounter : MonoBehaviour
     {
         if(other.gameObject.CompareTag("PolaroidArea"))
         {
-            VisitViewpoint(other.gameObject.transform.parent.gameObject.transform.parent.gameObject.name);
+            GameObject particle = other.gameObject.transform.parent.gameObject;
+            GameObject viewpoint = particle.transform.parent.gameObject;
+            VisitViewpoint(viewpoint.name);
         }
     }
 }
