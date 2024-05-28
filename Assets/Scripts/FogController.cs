@@ -27,7 +27,7 @@ public class FogController : MonoBehaviour
         if (fogPoint == null) {return;}
 
         float distance = Vector3.Distance(transform.position, fogPoint.position);
-        Debug.Log(RenderSettings.fogDensity);
+        // Debug.Log(RenderSettings.fogDensity);
         //Debug.Log("Current Distance: " + distance);
         //Debug.Log(distance);
         if (distance <= activationDistance)
