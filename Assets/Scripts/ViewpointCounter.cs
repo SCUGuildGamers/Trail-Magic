@@ -57,7 +57,7 @@ public class ViewpointCounter : MonoBehaviour
         viewpointCounterText.text = "Viewpoints: " + visitedViewpoints + "/" + totalViewpoints;
     }
 
-    void VisitViewpoint(string viewpointName)
+    public void VisitViewpoint(string viewpointName)
     {
         if (viewpointStatus.ContainsKey(viewpointName))
         {
@@ -67,16 +67,6 @@ public class ViewpointCounter : MonoBehaviour
         else
         {
             Debug.LogError("Viewpoint " + viewpointName + " not found in dictionary");
-        }
-    }
-
-    void OnTriggerEnter(Collider other) 
-    {
-        if(other.gameObject.CompareTag("PolaroidArea"))
-        {
-            GameObject particle = other.gameObject.transform.parent.gameObject;
-            GameObject viewpoint = particle.transform.parent.gameObject;
-            VisitViewpoint(viewpoint.name);
         }
     }
 }

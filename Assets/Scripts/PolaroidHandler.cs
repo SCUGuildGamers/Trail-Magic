@@ -9,8 +9,10 @@ public class PolaroidHandler : MonoBehaviour
     [SerializeField] GameObject ninetiesPolaroid;
     [SerializeField] GameObject bwPolaroid;
     [SerializeField] private GameObject explanation;
+    [SerializeField] private ViewpointCounter viewpointCounter;
     private bool polaroidState;
     private bool polaroidOn;
+    private string currentViewpointName;
     
     void Start() 
     {
@@ -31,7 +33,6 @@ public class PolaroidHandler : MonoBehaviour
     {
         if(collider.gameObject.CompareTag(polaroidTag)) 
         {
-            Debug.Log("Entering!");
             polaroidState = true; 
             string era = collider.gameObject.GetComponent<PolaroidArea>().getTimeframe();
             if(era == "80s") 
@@ -46,14 +47,17 @@ public class PolaroidHandler : MonoBehaviour
             {
                 bwPolaroid.SetActive(true);
             }  
+
+            GameObject particle = collider.gameObject.transform.parent.gameObject;
+            GameObject viewpoint = particle.transform.parent.gameObject;
+            currentViewpointName = viewpoint.name;
         }
     }
 
     void OnTriggerExit(Collider collider) 
     {
-        if(collider.gameObject.tag == polaroidTag) 
+        if(collider.gameObject.CompareTag(polaroidTag)) 
         {
-            Debug.Log("Exiting!");
             polaroidState = false;
             eightiesPolaroid.SetActive(false);
             ninetiesPolaroid.SetActive(false);
@@ -73,10 +77,11 @@ public class PolaroidHandler : MonoBehaviour
                 explanation.SetActive(false);
             }
             
-            if (Input.GetKey("space")) 
+            if (Input.GetKey(KeyCode.Space)) 
             {
                 polaroidOn = true;
                 polaroidCam.SetActive(true);
+                viewpointCounter.VisitViewpoint(currentViewpointName);
             }
         }
         else 
