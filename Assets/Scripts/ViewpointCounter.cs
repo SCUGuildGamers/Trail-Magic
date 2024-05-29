@@ -11,6 +11,7 @@ public class ViewpointCounter : MonoBehaviour
     int visitedViewpoints;
     int totalViewpoints;
     [SerializeField] private TextMeshProUGUI viewpointCounterText;
+    [SerializeField] private float counterShowTime = 5f;
     
     // Start is called before the first frame update
     void Start()
@@ -24,13 +25,8 @@ public class ViewpointCounter : MonoBehaviour
 
         totalViewpoints = viewpoints.Count;
 
+        viewpointCounterText.alpha = 0f; // Hide the counter at the start
         CountVisitedViewpoints();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public int VisitedViewpoints
@@ -63,10 +59,19 @@ public class ViewpointCounter : MonoBehaviour
         {
             viewpointStatus[viewpointName] = true;
             CountVisitedViewpoints();
+
+            StartCoroutine(ShowViewpointCounter()); // Show the counter for a few seconds
         }
         else
         {
             Debug.LogError("Viewpoint " + viewpointName + " not found in dictionary");
         }
+    }
+
+    private IEnumerator ShowViewpointCounter()
+    {
+        viewpointCounterText.alpha = 1f; // Show the counter
+        yield return new WaitForSeconds(counterShowTime);
+        viewpointCounterText.alpha = 0f; // Hide the counter
     }
 }
