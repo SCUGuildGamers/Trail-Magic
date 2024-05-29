@@ -12,8 +12,8 @@ public class OptionsMenu : MonoBehaviour
     {
         if(!PlayerPrefs.HasKey("fullscreenValue"))
         {
-            PlayerPrefs.SetInt("fullscreenValue", 1);
-            PlayerPrefs.Save();
+            PlayerPrefs.SetInt("fullscreenValue", 0);
+            fullscreenToggle.isOn = false;
             Load();
         }
         else
@@ -33,6 +33,5 @@ public class OptionsMenu : MonoBehaviour
         Screen.fullScreen = isFullscreen;
         int fullScreen = Screen.fullScreen ? 0 : 1;
         PlayerPrefs.SetInt("fullscreenValue", fullScreen);
-        PlayerPrefs.Save();
     }
 }

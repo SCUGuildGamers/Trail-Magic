@@ -12,6 +12,12 @@ public class FullscreenToggle : MonoBehaviour, IPointerClickHandler
     [SerializeField] Image graphicOn;
     [SerializeField] Image graphicOff;
     [SerializeField] ToggleEvent onValueChanged = new ToggleEvent();
+    bool initizalizationComplete = false;
+
+    void Start()
+    {
+        initizalizationComplete = true;
+    }
 
     public bool isOn
     {
@@ -26,7 +32,8 @@ public class FullscreenToggle : MonoBehaviour, IPointerClickHandler
             graphicOn.canvasRenderer.SetAlpha(m_isOn ? 1 : 0);
             graphicOff.canvasRenderer.SetAlpha(m_isOn ? 0 : 1);
 
-            onValueChanged.Invoke(m_isOn);
+            if (initizalizationComplete)
+                onValueChanged.Invoke(m_isOn);
         }
     }
 
