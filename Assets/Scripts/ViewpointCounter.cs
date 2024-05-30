@@ -50,7 +50,7 @@ public class ViewpointCounter : MonoBehaviour
             }
         }
 
-        viewpointCounterText.text = "Viewpoints: " + visitedViewpoints + "/" + totalViewpoints;
+        viewpointCounterText.text = visitedViewpoints + "/" + totalViewpoints;
     }
 
     public void VisitViewpoint(string viewpointName)
