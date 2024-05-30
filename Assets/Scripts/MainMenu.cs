@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private PlayerData playerData;
+    [SerializeField] private AudioSource audioSource;
+
+    public void Start()
+    {
+        audioSource.Play();
+    }
 
     public void StartGame()
     {
@@ -15,6 +21,8 @@ public class MainMenu : MonoBehaviour
         // Load the scene
         FindObjectOfType<FlashEffect>().PlayButtonPressed(playerData.checkpoint);
         // SceneManager.LoadScene(playerData.checkpoint);
+
+        audioSource.Stop();
     }
 
     public void QuitGame()

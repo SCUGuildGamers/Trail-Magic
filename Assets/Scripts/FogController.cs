@@ -6,7 +6,7 @@ public class FogController : MonoBehaviour
 {
     [SerializeField] Material cloudMaterial;
     public Transform fogPoint;
-    public ParticleSystem overheadFog;
+    //public ParticleSystem overheadFog;
     [SerializeField]
     private float maxDistance = 50.0f;
     [SerializeField]
@@ -30,7 +30,7 @@ public class FogController : MonoBehaviour
         // Debug.Log(RenderSettings.fogDensity);
         //Debug.Log("Current Distance: " + distance);
         //Debug.Log(distance);
-        if (distance <= activationDistance)
+       /* if (distance <= activationDistance)
         {
             if (!overheadFog.isPlaying)
             {
@@ -47,7 +47,7 @@ public class FogController : MonoBehaviour
                     overheadFog.gameObject.SetActive(false);
                 }
 
-        }
+        }*/
         distance = Mathf.Min(distance, maxDistance);
         if (distance >= activationDistance)
         {
