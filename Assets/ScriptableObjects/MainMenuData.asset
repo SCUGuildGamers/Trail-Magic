@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MainMenuData
   m_EditorClassIdentifier: 
   checkpoint: 0
-  position: {x: 0, y: 0, z: 0}
+  position: {x: 805.5, y: 220.6, z: -150.6}
   rotation: {x: 0, y: 0, z: 0}
