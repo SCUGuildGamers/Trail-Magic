@@ -31,6 +31,9 @@ public class LightingManager : MonoBehaviour
     [SerializeField] Material shortTrunkMat;
     [SerializeField] Material shortBranchMat;
 
+    //cabin materials
+    [SerializeField] Material WoodMat;
+
     //[SerializeField] Volume dawnProfile;
     //[SerializeField] Volume dayProfile;
     //[SerializeField] Volume eveningProfile;
@@ -220,6 +223,9 @@ public class LightingManager : MonoBehaviour
             shortTrunkMat.color = currentTransition.shortTrunkColor.Evaluate(lerpValue);
             shortBranchMat.SetColor("_BranchTint", currentTransition.shortTrunkColor.Evaluate(lerpValue));
             shortBranchMat.SetColor("_LeavesTint", currentTransition.shortLeafColor.Evaluate(lerpValue));
+
+            //cabin
+            WoodMat.color = currentTransition.woodColor.Evaluate(lerpValue);
         }
     }
 }

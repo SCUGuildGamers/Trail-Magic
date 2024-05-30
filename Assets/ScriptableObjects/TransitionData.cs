@@ -67,4 +67,7 @@ public class TransitionData : ScriptableObject
     public Gradient tallLeafColor;
     public Gradient shortTrunkColor;
     public Gradient shortLeafColor;
+
+    //cabin
+    public Gradient woodColor;
 }
