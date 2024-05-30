@@ -11,6 +11,7 @@ public class ViewpointCounter : MonoBehaviour
     int visitedViewpoints;
     int totalViewpoints;
     [SerializeField] private TextMeshProUGUI viewpointCounterText;
+    [SerializeField] private Image eye;
     [SerializeField] private float counterShowTime = 5f;
     
     // Start is called before the first frame update
@@ -26,6 +27,7 @@ public class ViewpointCounter : MonoBehaviour
         totalViewpoints = viewpoints.Count;
 
         viewpointCounterText.alpha = 0f; // Hide the counter at the start
+        eye.enabled = false;
         CountVisitedViewpoints();
     }
 
@@ -71,7 +73,9 @@ public class ViewpointCounter : MonoBehaviour
     private IEnumerator ShowViewpointCounter()
     {
         viewpointCounterText.alpha = 1f; // Show the counter
+        eye.enabled = true; // Show the eye icon
         yield return new WaitForSeconds(counterShowTime);
         viewpointCounterText.alpha = 0f; // Hide the counter
+        eye.enabled = false; // Hide the eye icon
     }
 }
