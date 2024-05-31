@@ -7,6 +7,7 @@ TagManager:
   - PolaroidCamera
   - PolaroidArea
   - hoverable
+  - ViewpointArea
   layers:
   - Default
   - TransparentFX

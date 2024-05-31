@@ -55,7 +55,7 @@ public class ViewpointCounter : MonoBehaviour
         viewpointCounterText.text = visitedViewpoints + "/" + totalViewpoints;
     }
 
-    public void VisitViewpoint(string viewpointName)
+    void VisitViewpoint(string viewpointName)
     {
         if (viewpointStatus.ContainsKey(viewpointName))
         {
@@ -77,5 +77,16 @@ public class ViewpointCounter : MonoBehaviour
         yield return new WaitForSeconds(counterShowTime);
         viewpointCounterText.alpha = 0f; // Hide the counter
         eye.enabled = false; // Hide the eye icon
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("PolaroidArea") || other.gameObject.CompareTag("ViewpointArea"))
+        {
+            GameObject particle = other.gameObject.transform.parent.gameObject;
+            GameObject viewpoint = particle.transform.parent.gameObject;
+
+            VisitViewpoint(viewpoint.name);
+        }
     }
 }

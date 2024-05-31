@@ -9,10 +9,8 @@ public class PolaroidHandler : MonoBehaviour
     [SerializeField] GameObject ninetiesPolaroid;
     [SerializeField] GameObject bwPolaroid;
     [SerializeField] private GameObject explanation;
-    [SerializeField] private ViewpointCounter viewpointCounter;
     private bool polaroidState;
     private bool polaroidOn;
-    private string currentViewpointName;
     
     void Start() 
     {
@@ -46,11 +44,7 @@ public class PolaroidHandler : MonoBehaviour
             else if (era == "bw") 
             {
                 bwPolaroid.SetActive(true);
-            }  
-
-            GameObject particle = collider.gameObject.transform.parent.gameObject;
-            GameObject viewpoint = particle.transform.parent.gameObject;
-            currentViewpointName = viewpoint.name;
+            }
         }
     }
 
@@ -81,7 +75,6 @@ public class PolaroidHandler : MonoBehaviour
             {
                 polaroidOn = true;
                 polaroidCam.SetActive(true);
-                viewpointCounter.VisitViewpoint(currentViewpointName);
             }
         }
         else 
