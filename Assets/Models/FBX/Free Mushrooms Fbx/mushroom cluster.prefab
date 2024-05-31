@@ -1,0 +1,301 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5260620656882708213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7149257450212148695}
+  m_Layer: 0
+  m_Name: mushroom cluster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7149257450212148695
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5260620656882708213}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 431.21817, y: 76.704, z: 485.9145}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3527460777604712230}
+  - {fileID: 3703353023032022648}
+  - {fileID: 4325146787863832756}
+  - {fileID: 4269643341419717066}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3814067888731206035
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7149257450212148695}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 34ebadf646c3e364a8b5dcf41d1dbff0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.6939087
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 34ebadf646c3e364a8b5dcf41d1dbff0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.06612396
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 34ebadf646c3e364a8b5dcf41d1dbff0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.19589233
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 34ebadf646c3e364a8b5dcf41d1dbff0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 34ebadf646c3e364a8b5dcf41d1dbff0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 34ebadf646c3e364a8b5dcf41d1dbff0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 34ebadf646c3e364a8b5dcf41d1dbff0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 34ebadf646c3e364a8b5dcf41d1dbff0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 34ebadf646c3e364a8b5dcf41d1dbff0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 34ebadf646c3e364a8b5dcf41d1dbff0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 34ebadf646c3e364a8b5dcf41d1dbff0, type: 3}
+      propertyPath: m_Name
+      value: Cantharellaceae_big
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 34ebadf646c3e364a8b5dcf41d1dbff0, type: 3}
+--- !u!4 &3703353023032022648 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 34ebadf646c3e364a8b5dcf41d1dbff0, type: 3}
+  m_PrefabInstance: {fileID: 3814067888731206035}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3998835409172685005
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7149257450212148695}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.43777466
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.008544922
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.0877686
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_Name
+      value: Cantharellaceae_little
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+--- !u!4 &3527460777604712230 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+  m_PrefabInstance: {fileID: 3998835409172685005}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4291010617419419487
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7149257450212148695}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.15042114
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.027191162
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.85476685
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c003a868f03b008458cd092e65662717, type: 2}
+    - target: {fileID: 919132149155446097, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_Name
+      value: Cantharellaceae_little (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+--- !u!4 &4325146787863832756 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+  m_PrefabInstance: {fileID: 4291010617419419487}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4380428495735637537
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7149257450212148695}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9592229
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9592229
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9592229
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+      propertyPath: m_Name
+      value: Cantharellaceae_little (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+--- !u!4 &4269643341419717066 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 63bb31422c0484d4389877b602414c61, type: 3}
+  m_PrefabInstance: {fileID: 4380428495735637537}
+  m_PrefabAsset: {fileID: 0}
