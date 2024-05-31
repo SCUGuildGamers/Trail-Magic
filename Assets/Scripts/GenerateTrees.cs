@@ -6,7 +6,9 @@ public class GenerateTrees : MonoBehaviour
 {
     //public static GameObject flowerPrefab;
     public static void MakeTreeColliders(Terrain terrain)
-    { 
+    {
+        List<string> treeNames = new List<string> { "FIREWEED", "goldenpaintbrushBIG", "goldenpaintbrushSMALLCTD" };
+        
         GameObject treeColliders = new GameObject("Tree Colliders");
         treeColliders.transform.parent = terrain.transform;
         
@@ -44,14 +46,17 @@ public class GenerateTrees : MonoBehaviour
             index++;*/
 
             //GameObject tc = new GameObject("TC" + string.Format("{0:00000}", index));
-            GameObject nt = Instantiate(tps[ti.prototypeIndex].prefab, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0)); 
-            nt.name = tps[ti.prototypeIndex].prefab.name + string.Format("{0:00000}", index); // name and unique identifier
-            nt.transform.parent = treeColliders.transform; // set as child of treeColliders ("Tree Colliders")
-            nt.transform.position = TerrainExtras.WorldCoordinates(terrain, ti.position); // convert tree position to world coordinates
-            nt.transform.localScale *= 2f; // scale of instantiated object is doubled
-            nt.SetActive(true);
-            //nt.transform.position += new Vector3(0f, nt.transform.localScale.y / 2, 0f);
-            index++;
+            if (treeNames.Contains(tps[ti.prototypeIndex].prefab.name))
+            {
+                GameObject nt = Instantiate(tps[ti.prototypeIndex].prefab, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0)); 
+                nt.name = tps[ti.prototypeIndex].prefab.name + string.Format("{0:00000}", index); // name and unique identifier
+                nt.transform.parent = treeColliders.transform; // set as child of treeColliders ("Tree Colliders")
+                nt.transform.position = TerrainExtras.WorldCoordinates(terrain, ti.position); // convert tree position to world coordinates
+                nt.transform.localScale *= 2f; // scale of instantiated object is doubled
+                nt.SetActive(true);
+                //nt.transform.position += new Vector3(0f, nt.transform.localScale.y / 2, 0f);
+                index++;
+            }
         }
     }
 }
