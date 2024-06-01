@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class OptionsMenu : MonoBehaviour
 {
     [SerializeField] FullscreenToggle fullscreenToggle;
-    [SerializeField] Slider volumeSlider;
+    [SerializeField] VolumeSlider volumeSlider;
     [SerializeField] TextMeshProUGUI volumeTextUI;
     
     // Start is called before the first frame update
