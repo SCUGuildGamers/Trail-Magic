@@ -11,6 +11,7 @@ public class PolaroidHandler : MonoBehaviour
     [SerializeField] private GameObject explanation;
     private bool polaroidState;
     private bool polaroidOn;
+    private bool canTogglePolaroid = true; // flag to prevent rapid toggling
     
     void Start() 
     {
@@ -71,10 +72,9 @@ public class PolaroidHandler : MonoBehaviour
                 explanation.SetActive(false);
             }
             
-            if (Input.GetKey(KeyCode.Space)) 
+            if (Input.GetKey(KeyCode.Space) && canTogglePolaroid) 
             {
-                polaroidOn = true;
-                polaroidCam.SetActive(true);
+                StartCoroutine(TogglePolaroidWithDelay());
             }
         }
         else 
@@ -83,5 +83,14 @@ public class PolaroidHandler : MonoBehaviour
             polaroidCam.SetActive(false);
             explanation.SetActive(false);
         }    
+    }
+
+    IEnumerator TogglePolaroidWithDelay()
+    {
+        canTogglePolaroid = false;
+        polaroidOn = !polaroidOn;
+        polaroidCam.SetActive(polaroidOn);
+        yield return new WaitForSeconds(0.5f);
+        canTogglePolaroid = true;
     }
 }
