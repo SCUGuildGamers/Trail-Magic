@@ -754,4 +754,9 @@ public class VolumeSlider : Selectable, IDragHandler, IInitializePotentialDragHa
 #endif
         return true;
     }
+
+    public Vector3 RelativeMouseAtScaled(Vector2 position)
+    {
+        return Display.RelativeMouseAt(position);
+    }
 }
