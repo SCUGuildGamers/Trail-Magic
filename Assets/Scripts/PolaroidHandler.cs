@@ -8,7 +8,7 @@ public class PolaroidHandler : MonoBehaviour
     [SerializeField] GameObject eightiesPolaroid;
     [SerializeField] GameObject ninetiesPolaroid;
     [SerializeField] GameObject bwPolaroid;
-    [SerializeField] private GameObject explanation;
+    [SerializeField] GameObject tip;
     private bool polaroidState;
     private bool polaroidOn;
     private bool canTogglePolaroid = true; // flag to prevent rapid toggling
@@ -20,6 +20,7 @@ public class PolaroidHandler : MonoBehaviour
         eightiesPolaroid.SetActive(false);
         ninetiesPolaroid.SetActive(false);
         bwPolaroid.SetActive(false);
+        tip.SetActive(false);
         PolaroidStateHandler();
     }
     
@@ -66,10 +67,10 @@ public class PolaroidHandler : MonoBehaviour
         {
             if(!polaroidOn) 
             {
-                explanation.SetActive(true);
+                tip.SetActive(true);
             } else 
             {
-                explanation.SetActive(false);
+                tip.SetActive(false);
             }
             
             if (Input.GetKey(KeyCode.Space) && canTogglePolaroid) 
@@ -81,7 +82,7 @@ public class PolaroidHandler : MonoBehaviour
         {
             polaroidOn = false;
             polaroidCam.SetActive(false);
-            explanation.SetActive(false);
+            tip.SetActive(false);
         }    
     }
 

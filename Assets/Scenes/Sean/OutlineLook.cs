@@ -6,16 +6,17 @@ using TMPro;
 
 public class OutlineLook : MonoBehaviour
 {
-    [SerializeField] private GameObject hitObject;
-    [SerializeField] private HoverObject currentHoverObject;
-    [SerializeField] private bool selected = false;
+    private GameObject hitObject;
+    private HoverObject currentHoverObject;
+    private bool selected = false;
     //text script object (sean stuff)
-    public GameObject uiCanvas;
+    [SerializeField] private GameObject uiCanvas;
     // tmp name public
-    public TextMeshProUGUI NameText;
+    [SerializeField] private TextMeshProUGUI NameText;
     //tmp body
-    public TextMeshProUGUI BodyText;
+    [SerializeField] private TextMeshProUGUI BodyText;
     // Update is called once per frame
+    [SerializeField] private GameObject inGameMenu;
 
     private void Start()
     {
@@ -75,9 +76,10 @@ public class OutlineLook : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("clicked");
-            Selected();
-            
+            if (!inGameMenu.activeSelf)
+            {
+                Selected();
+            }
         }
     }
     //make a select function here
