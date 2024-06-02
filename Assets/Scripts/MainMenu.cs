@@ -7,10 +7,24 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] private PlayerData playerData;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private GameObject mainMenu;
+    [SerializeField] private GameObject optionsMenu;
 
-    public void Start()
+    void Start()
     {
         audioSource.Play();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (optionsMenu.activeSelf)
+            {
+                optionsMenu.SetActive(false);
+                mainMenu.SetActive(true);
+            }
+        }
     }
 
     public void StartGame()

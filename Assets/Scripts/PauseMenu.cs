@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private PlayerData playerData;
     [SerializeField] private GameObject inGameMenu;
     [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject optionsMenu;
     private bool isPaused = false;
     [SerializeField] private Reticle reticle;
 
@@ -15,6 +16,24 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            // if no menu is open
+            if (!pauseMenu.activeSelf && !optionsMenu.activeSelf)
+            {
+                Pause();
+            }
+            // if Pause Menu alone is open
+            else if (pauseMenu.activeSelf)
+            {
+                Resume();
+            }
+            // if Options Menu is open
+            else if (optionsMenu.activeSelf)
+            {
+                optionsMenu.SetActive(false);
+                pauseMenu.SetActive(true);
+            }
+
+            /*
             if (isPaused)
             {
                 Resume();
@@ -23,13 +42,14 @@ public class PauseMenu : MonoBehaviour
             {
                 Pause();
             }
+            */
         }
     }
 
     public void Pause() 
     {
+        pauseMenu.SetActive(true);
         inGameMenu.SetActive(true);
-        // pauseMenu.SetActive(true);
         reticle.Locked = false;
         Time.timeScale = 0f;
         isPaused = true;
@@ -37,7 +57,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        // pauseMenu.SetActive(false);
+        pauseMenu.SetActive(false);
         inGameMenu.SetActive(false);
         reticle.Locked = true;
         Time.timeScale = 1f;
