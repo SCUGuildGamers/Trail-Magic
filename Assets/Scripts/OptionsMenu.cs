@@ -41,6 +41,7 @@ public class OptionsMenu : MonoBehaviour
     private void Load()
     {
         volumeSlider.value = PlayerPrefs.GetFloat("gameVolume");
+        volumeTextUI.text = volumeSlider.value.ToString("0%");
         AudioListener.volume = volumeSlider.value;
 
         fullscreenToggle.isOn = PlayerPrefs.GetInt("fullscreenValue") > 0;
