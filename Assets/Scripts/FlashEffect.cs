@@ -21,7 +21,7 @@ public class FlashEffect : MonoBehaviour
         blackImage.color = new Color(0, 0, 0, 1); // set the initial color to black
     }
 
-    public void PlayButtonPressed(int sceneIndex)
+    public void ButtonPressed(int sceneIndex)
     {
         StartCoroutine(FlashAndLoadScene(sceneIndex));
     }

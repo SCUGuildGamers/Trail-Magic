@@ -33,7 +33,7 @@ public class MainMenu : MonoBehaviour
         // This can only be implemented once MainMenu is in the same scene
         
         // Load the scene
-        FindObjectOfType<FlashEffect>().PlayButtonPressed(playerData.checkpoint);
+        FindObjectOfType<FlashEffect>().ButtonPressed(playerData.checkpoint);
         // SceneManager.LoadScene(playerData.checkpoint);
 
         audioSource.Stop();

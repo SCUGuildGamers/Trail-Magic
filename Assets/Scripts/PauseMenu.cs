@@ -66,9 +66,9 @@ public class PauseMenu : MonoBehaviour
     
     public void QuitToMainMenu()
     {
-        // Load the 
+        // Load the Title Menu scene
         Time.timeScale = 1f;
-        SceneManager.LoadScene(playerData.checkpoint);
+        FindObjectOfType<FlashEffect>().ButtonPressed(playerData.checkpoint);
     }
 
     public bool IsPaused
