@@ -5,9 +5,9 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using static UnityEngine.UI.Toggle;
 
-public class FullscreenToggle : MonoBehaviour, IPointerClickHandler
+public class FullscreenToggle : Selectable, IPointerClickHandler
 {
-    [SerializeField] bool interactable = true;
+    //[SerializeField] bool interactable = true;
     [SerializeField] bool m_isOn = true;
     [SerializeField] Image graphicOn;
     [SerializeField] Image graphicOff;
@@ -26,11 +26,13 @@ public class FullscreenToggle : MonoBehaviour, IPointerClickHandler
         { 
             m_isOn = value;
 
-            // graphicOn.gameObject.SetActive(m_isOn);
-            // graphicOff.gameObject.SetActive(!m_isOn);
+            graphicOn.gameObject.SetActive(m_isOn);
+            graphicOff.gameObject.SetActive(!m_isOn);
 
-            graphicOn.canvasRenderer.SetAlpha(m_isOn ? 1 : 0);
-            graphicOff.canvasRenderer.SetAlpha(m_isOn ? 0 : 1);
+            targetGraphic = m_isOn ? graphicOn : graphicOff;
+
+            //graphicOn.canvasRenderer.SetAlpha(m_isOn ? 1 : 0);
+            //graphicOff.canvasRenderer.SetAlpha(m_isOn ? 0 : 1);
 
             if (initizalizationComplete)
                 onValueChanged.Invoke(m_isOn);
